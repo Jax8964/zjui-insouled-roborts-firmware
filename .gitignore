@@ -34,3 +34,6 @@ JLinkLog.txt
 *.ini
 *.sct
 *.uvguix.*
+.DS_Store
+.tags
+.tags1

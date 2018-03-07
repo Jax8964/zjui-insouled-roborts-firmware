@@ -39,7 +39,7 @@
 
 /* keyboard mode speed limit */
 /* left and right speed (mm/s) */
-#define CHASSIS_KB_MAX_SPEED_X  3300.0f 
+#define CHASSIS_KB_MAX_SPEED_X  3300.0f
 #define CHASSIS_KB_MOVE_RATIO_X 1.0f
 /* back and forward speed (mm/s) */
 #define CHASSIS_KB_MAX_SPEED_Y  3300.0f
@@ -58,11 +58,11 @@
 /* yaw axis speed */
 #define GIMBAL_PC_MOVE_RATIO_YAW 1.0f
 
-/**************************shoot  setting********************************/
-/* shoot speed */
+/**************************shot  setting********************************/
+/* shot speed */
 #define DEFAULT_FRIC_WHEEL_SPEED 1150 //maximum value is 2500
-/* shoot frequence */
-#define TRIGGER_MOTOR_SPEED      2000 
+/* shot frequence */
+#define TRIGGER_MOTOR_SPEED      2000
 
 
 
@@ -116,9 +116,9 @@
 /* the deceleration ratio of pitch axis motor */
 #define PIT_DECELE_RATIO       1.0f
 /* the deceleration ratio of yaw axis motor */
-#define YAW_DECELE_RATIO       1.0f
+#define YAW_DECELE_RATIO       1.0f    //(5.0f/8.0f)
 /* the positive direction of pitch axis motor */
-#define PIT_MOTO_POSITIVE_DIR  -1.0f
+#define PIT_MOTO_POSITIVE_DIR  1.0f
 /* the positive direction of yaw axis motor */
 #define YAW_MOTO_POSITIVE_DIR  1.0f
 /* the positive direction of tirgger motor */
@@ -130,7 +130,7 @@
 /***********************system interface setting****************************/
 
 /* automatic navigation interface */
-#define AUTO_NAVIGATION
+//#define AUTO_NAVIGATION
 
 /* can relevant */
 #define CHASSIS_CAN       hcan1
@@ -143,7 +143,7 @@
 /* uart relevant */
 /**
   * @attention
-  * close usart DMA receive interrupt, so need add 
+  * close usart DMA receive interrupt, so need add
   * uart_receive_handler() before HAL_UART_IROHandler() in uart interrupt function
 */
 #define DBUS_HUART         huart1 //for dji remote controler reciever
