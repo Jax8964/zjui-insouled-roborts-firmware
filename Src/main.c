@@ -163,40 +163,25 @@ int main(void)
   can_receive_start();
   //open dbus uart receive it
   dbus_uart_init();
-
   /* USER CODE END 2 */
 
   /* Call init function for freertos objects (in freertos.c) */
-  MX_FREERTOS_Init();
+  //MX_FREERTOS_Init();
 
   /* Start scheduler */
-  //FIXME: Can't pass! Even in the offical code.
-  osKernelStart();
+  //osKernelStart();
 
   /* We should never get here as control is now taken by the scheduler */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  
 
   while (1)
   {
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
-    //NOTE: From info_get_task.c - info_get_task()
-    //uart_receive_handler(&DBUS_HUART);
-    /*get_chassis_info();
-    get_gimbal_info();
-
-    //NOTE:
-    //NOTE: From chassis_task - chassis_task()
-
-
-
-    //NOTE: From comm_task - can_msg_send_task()
-    send_gimbal_motor_ctrl_message(glb_cur.gimbal_cur);
-    send_chassis_motor_ctrl_message(glb_cur.chassis_cur);*/
+    chassis_task(NULL);
 
   }
   /* USER CODE END 3 */

@@ -76,23 +76,23 @@ void chassis_task(void const *argu)
 
     case AUTO_FOLLOW_GIMBAL:
     {
-      taskENTER_CRITICAL();
+      //();
       chassis.vx = (float)pc_rece_mesg.chassis_control_data.x_speed;
       chassis.vy = (float)pc_rece_mesg.chassis_control_data.y_speed;
       chassis.position_ref = 0;
-      taskEXIT_CRITICAL();
+      //taskEXIT_CRITICAL();
 
       chassis.vw = pid_calc(&pid_chassis_angle, gim.sensor.yaw_relative_angle, chassis.position_ref);
     }break;
 
     case AUTO_SEPARATE_GIMBAL:
     {
-      taskENTER_CRITICAL();
+      //taskENTER_CRITICAL();
       chassis.vx = (float)pc_rece_mesg.chassis_control_data.x_speed;
       chassis.vy = (float)pc_rece_mesg.chassis_control_data.y_speed;
       chassis.position_ref = 0;
       chassis.vw = pc_rece_mesg.chassis_control_data.w_info.w_speed;
-      taskEXIT_CRITICAL();
+      //taskEXIT_CRITICAL();
 
     }break;
 
@@ -130,9 +130,11 @@ void chassis_task(void const *argu)
   }
 
   memcpy(glb_cur.chassis_cur, chassis.current, sizeof(chassis.current));
-  osSignalSet(can_msg_send_task_t, CHASSIS_MOTOR_MSG_SEND);
 
-  chassis_stack_surplus = uxTaskGetStackHighWaterMark(NULL);
+  //NOTE: Waiting Flags
+  //osSignalSet(can_msg_send_task_t, CHASSIS_MOTOR_MSG_SEND);
+
+  //chassis_stack_surplus = uxTaskGetStackHighWaterMark(NULL);
 }
 
 
@@ -193,7 +195,7 @@ void mecanum_calc(float vx, float vy, float vw, int16_t speed[])
   static float rotate_ratio_br;
   static float wheel_rpm_ratio;
 
-  taskENTER_CRITICAL();
+  //taskENTER_CRITICAL();
   if(chassis.ctrl_mode == DODGE_MODE)
   {
     chassis.rotate_x_offset = GIMBAL_X_OFFSET;
@@ -224,7 +226,7 @@ void mecanum_calc(float vx, float vy, float vw, int16_t speed[])
     rotate_ratio_br = rotate_ratio_fr;
   }
   wheel_rpm_ratio = 60.0f/(glb_struct.wheel_perimeter*CHASSIS_DECELE_RATIO);
-  taskEXIT_CRITICAL();
+  //taskEXIT_CRITICAL();
 
 
   VAL_LIMIT(vx, -MAX_CHASSIS_VX_SPEED, MAX_CHASSIS_VX_SPEED);  //mm/s
