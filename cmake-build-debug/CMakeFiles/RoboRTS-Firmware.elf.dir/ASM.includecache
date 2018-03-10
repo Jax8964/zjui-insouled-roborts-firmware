@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../Inc/FreeRTOSConfig.h
+stdint.h
+-
+main.h
+../Inc/main.h
+
+../Inc/main.h
+
+/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/IAR/ARM_CM0/portasm.s
+FreeRTOSConfig.h
+-
+
+/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/IAR/ARM_CM3/portasm.s
+FreeRTOSConfig.h
+-
+
+/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/IAR/ARM_CM4F/portasm.s
+FreeRTOSConfig.h
+-
+
+/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/IAR/ARM_CM7/r0p1/portasm.s
+FreeRTOSConfig.h
+-
+
+/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/Tasking/ARM_CM4F/port_asm.asm
+

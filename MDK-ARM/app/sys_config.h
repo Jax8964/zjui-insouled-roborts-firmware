@@ -84,7 +84,7 @@
 
 /* chassis motor use 3508 default */
 /* define CHASSIS_EC60 to use EC60 */
-#define CHASSIS_EC60
+//#define CHASSIS_EC60
 
 #ifdef CHASSIS_EC60
   /* chassis motor use EC60 */

@@ -1,0 +1,179 @@
+The target system is: Generic - 1 - 
+The host system is: Darwin - 17.4.0 - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/local/bin/arm-none-eabi-gcc 
+Build flags: 
+Id flags: -c 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+
+The C compiler identification is GNU, found in "/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/CMakeCCompilerId.o"
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_978aa/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_978aa.dir/build.make CMakeFiles/cmTC_978aa.dir/build
+Building C object CMakeFiles/cmTC_978aa.dir/CMakeCCompilerABI.c.obj
+/usr/local/bin/arm-none-eabi-gcc   -mcpu=cortex-m4  -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -g -fno-common -fmessage-length=0 -specs=nosys.specs -specs=nano.specs -std=gnu99    -o CMakeFiles/cmTC_978aa.dir/CMakeCCompilerABI.c.obj   -c /Applications/CLion.app/Contents/bin/cmake/share/cmake-3.9/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_978aa
+/Applications/CLion.app/Contents/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_978aa.dir/link.txt --verbose=1
+/usr/local/bin/arm-none-eabi-gcc -mcpu=cortex-m4  -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -g -fno-common -fmessage-length=0 -specs=nosys.specs -specs=nano.specs -std=gnu99   -Wl,-gc-sections -T /Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/STM32F427IIHx_FLASH.ld -v CMakeFiles/cmTC_978aa.dir/CMakeCCompilerABI.c.obj  -o cmTC_978aa 
+Using built-in specs.
+Reading specs from /usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/nosys.specs
+rename spec link_gcc_c_sequence to nosys_link_gcc_c_sequence
+Reading specs from /usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/nano.specs
+rename spec link to nano_link
+rename spec link_gcc_c_sequence to nano_link_gcc_c_sequence
+rename spec cpp to nano_cpp
+COLLECT_GCC=/usr/local/bin/arm-none-eabi-gcc
+COLLECT_LTO_WRAPPER=/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/lto-wrapper
+Target: arm-none-eabi
+Configured with: /Users/build/workspace/GCC-5-build_build-toolchain-mac/gcc-arm-none-eabi-5_4-2016q3-20160926/src/gcc/configure --target=arm-none-eabi --prefix=/Users/build/workspace/GCC-5-build_build-toolchain-mac/gcc-arm-none-eabi-5_4-2016q3-20160926/install-native --libexecdir=/Users/build/workspace/GCC-5-build_build-toolchain-mac/gcc-arm-none-eabi-5_4-2016q3-20160926/install-native/lib --infodir=/Users/build/workspace/GCC-5-build_build-toolchain-mac/gcc-arm-none-eabi-5_4-2016q3-20160926/install-native/share/doc/gcc-arm-none-eabi/info --mandir=/Users/build/workspace/GCC-5-build_build-toolchain-mac/gcc-arm-none-eabi-5_4-2016q3-20160926/install-native/share/doc/gcc-arm-none-eabi/man --htmldir=/Users/build/workspace/GCC-5-build_build-toolchain-mac/gcc-arm-none-eabi-5_4-2016q3-20160926/install-native/share/doc/gcc-arm-none-eabi/html --pdfdir=/Users/build/workspace/GCC-5-build_build-toolchain-mac/gcc-arm-none-eabi-5_4-2016q3-20160926/install-native/share/doc/gcc-arm-none-eabi/pdf --enable-languages=c,c++ --enable-plugins --disable-decimal-float --disable-libffi --disable-libgomp --disable-libmudflap --disable-libquadmath --disable-libssp --disable-libstdcxx-pch --disable-nls --disable-shared --disable-threads --disable-tls --with-gnu-as --with-gnu-ld --with-newlib --with-headers=yes --with-python-dir=share/gcc-arm-none-eabi --with-sysroot=/Users/build/workspace/GCC-5-build_build-toolchain-mac/gcc-arm-none-eabi-5_4-2016q3-20160926/install-native/arm-none-eabi --build=x86_64-apple-darwin10 --host=x86_64-apple-darwin10 --with-gmp=/Users/build/workspace/GCC-5-build_build-toolchain-mac/gcc-arm-none-eabi-5_4-2016q3-20160926/build-native/host-libs/usr --with-mpfr=/Users/build/workspace/GCC-5-build_build-toolchain-mac/gcc-arm-none-eabi-5_4-2016q3-20160926/build-native/host-libs/usr --with-mpc=/Users/build/workspace/GCC-5-build_build-toolchain-mac/gcc-arm-none-eabi-5_4-2016q3-20160926/build-native/host-libs/usr --with-isl=/Users/build/workspace/GCC-5-build_build-toolchain-mac/gcc-arm-none-eabi-5_4-2016q3-20160926/build-native/host-libs/usr --with-cloog=/Users/build/workspace/GCC-5-build_build-toolchain-mac/gcc-arm-none-eabi-5_4-2016q3-20160926/build-native/host-libs/usr --with-libelf=/Users/build/workspace/GCC-5-build_build-toolchain-mac/gcc-arm-none-eabi-5_4-2016q3-20160926/build-native/host-libs/usr --with-host-libstdcxx='-static-libgcc -Wl,-lstdc++ -lm' --with-pkgversion='GNU Tools for ARM Embedded Processors' --with-multilib-list=armv6-m,armv7-m,armv7e-m,armv7-r,armv8-m.base,armv8-m.main
+Thread model: single
+gcc version 5.4.1 20160919 (release) [ARM/embedded-5-branch revision 240496] (GNU Tools for ARM Embedded Processors) 
+COMPILER_PATH=/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/:/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/:/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/bin/
+LIBRARY_PATH=/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/:/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/:/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../arm-none-eabi/lib/armv7e-m/:/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/:/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/:/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/:/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../arm-none-eabi/lib/
+COLLECT_GCC_OPTIONS='-mcpu=cortex-m4' '-mthumb' '-mthumb-interwork' '-ffunction-sections' '-fdata-sections' '-g' '-fno-common' '-fmessage-length=0' '-specs=nosys.specs' '-specs=nano.specs' '-std=gnu99' '-T' '/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/STM32F427IIHx_FLASH.ld' '-v' '-o' 'cmTC_978aa'
+ /usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/collect2 -plugin /usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/liblto_plugin.so -plugin-opt=/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/lto-wrapper -plugin-opt=-fresolution=/var/folders/m7/41pr8n2n6xb_qvh8c7kb1tth0000gn/T//ccMOCj21.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lg_nano -plugin-opt=-pass-through=-lc_nano -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc_nano -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc_nano -plugin-opt=-pass-through=-lnosys --sysroot=/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../arm-none-eabi -X -o cmTC_978aa /usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/crti.o /usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/crtbegin.o /usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/crt0.o -L/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m -L/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m -L/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../arm-none-eabi/lib/armv7e-m -L/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1 -L/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc -L/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib -L/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../arm-none-eabi/lib -gc-sections CMakeFiles/cmTC_978aa.dir/CMakeCCompilerABI.c.obj --start-group -lgcc -lg_nano -lc_nano --end-group --start-group -lgcc -lc_nano -lnosys --end-group --start-group -lgcc -lc_nano -lnosys --end-group /usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/crtend.o /usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/crtn.o -T /Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/STM32F427IIHx_FLASH.ld
+/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol Reset_Handler; defaulting to 0000000008000000
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(arm-none-eabi-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/cmake-build-debug/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_978aa/fast"]
+  ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_978aa.dir/build.make CMakeFiles/cmTC_978aa.dir/build]
+  ignore line: [Building C object CMakeFiles/cmTC_978aa.dir/CMakeCCompilerABI.c.obj]
+  ignore line: [/usr/local/bin/arm-none-eabi-gcc   -mcpu=cortex-m4  -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -g -fno-common -fmessage-length=0 -specs=nosys.specs -specs=nano.specs -std=gnu99    -o CMakeFiles/cmTC_978aa.dir/CMakeCCompilerABI.c.obj   -c /Applications/CLion.app/Contents/bin/cmake/share/cmake-3.9/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_978aa]
+  ignore line: [/Applications/CLion.app/Contents/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_978aa.dir/link.txt --verbose=1]
+  ignore line: [/usr/local/bin/arm-none-eabi-gcc -mcpu=cortex-m4  -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -g -fno-common -fmessage-length=0 -specs=nosys.specs -specs=nano.specs -std=gnu99   -Wl,-gc-sections -T /Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/STM32F427IIHx_FLASH.ld -v CMakeFiles/cmTC_978aa.dir/CMakeCCompilerABI.c.obj  -o cmTC_978aa ]
+  ignore line: [Using built-in specs.]
+  ignore line: [Reading specs from /usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/nosys.specs]
+  ignore line: [rename spec link_gcc_c_sequence to nosys_link_gcc_c_sequence]
+  ignore line: [Reading specs from /usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/nano.specs]
+  ignore line: [rename spec link to nano_link]
+  ignore line: [rename spec link_gcc_c_sequence to nano_link_gcc_c_sequence]
+  ignore line: [rename spec cpp to nano_cpp]
+  ignore line: [COLLECT_GCC=/usr/local/bin/arm-none-eabi-gcc]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/lto-wrapper]
+  ignore line: [Target: arm-none-eabi]
+  ignore line: [Configured with: /Users/build/workspace/GCC-5-build_build-toolchain-mac/gcc-arm-none-eabi-5_4-2016q3-20160926/src/gcc/configure --target=arm-none-eabi --prefix=/Users/build/workspace/GCC-5-build_build-toolchain-mac/gcc-arm-none-eabi-5_4-2016q3-20160926/install-native --libexecdir=/Users/build/workspace/GCC-5-build_build-toolchain-mac/gcc-arm-none-eabi-5_4-2016q3-20160926/install-native/lib --infodir=/Users/build/workspace/GCC-5-build_build-toolchain-mac/gcc-arm-none-eabi-5_4-2016q3-20160926/install-native/share/doc/gcc-arm-none-eabi/info --mandir=/Users/build/workspace/GCC-5-build_build-toolchain-mac/gcc-arm-none-eabi-5_4-2016q3-20160926/install-native/share/doc/gcc-arm-none-eabi/man --htmldir=/Users/build/workspace/GCC-5-build_build-toolchain-mac/gcc-arm-none-eabi-5_4-2016q3-20160926/install-native/share/doc/gcc-arm-none-eabi/html --pdfdir=/Users/build/workspace/GCC-5-build_build-toolchain-mac/gcc-arm-none-eabi-5_4-2016q3-20160926/install-native/share/doc/gcc-arm-none-eabi/pdf --enable-languages=c,c++ --enable-plugins --disable-decimal-float --disable-libffi --disable-libgomp --disable-libmudflap --disable-libquadmath --disable-libssp --disable-libstdcxx-pch --disable-nls --disable-shared --disable-threads --disable-tls --with-gnu-as --with-gnu-ld --with-newlib --with-headers=yes --with-python-dir=share/gcc-arm-none-eabi --with-sysroot=/Users/build/workspace/GCC-5-build_build-toolchain-mac/gcc-arm-none-eabi-5_4-2016q3-20160926/install-native/arm-none-eabi --build=x86_64-apple-darwin10 --host=x86_64-apple-darwin10 --with-gmp=/Users/build/workspace/GCC-5-build_build-toolchain-mac/gcc-arm-none-eabi-5_4-2016q3-20160926/build-native/host-libs/usr --with-mpfr=/Users/build/workspace/GCC-5-build_build-toolchain-mac/gcc-arm-none-eabi-5_4-2016q3-20160926/build-native/host-libs/usr --with-mpc=/Users/build/workspace/GCC-5-build_build-toolchain-mac/gcc-arm-none-eabi-5_4-2016q3-20160926/build-native/host-libs/usr --with-isl=/Users/build/workspace/GCC-5-build_build-toolchain-mac/gcc-arm-none-eabi-5_4-2016q3-20160926/build-native/host-libs/usr --with-cloog=/Users/build/workspace/GCC-5-build_build-toolchain-mac/gcc-arm-none-eabi-5_4-2016q3-20160926/build-native/host-libs/usr --with-libelf=/Users/build/workspace/GCC-5-build_build-toolchain-mac/gcc-arm-none-eabi-5_4-2016q3-20160926/build-native/host-libs/usr --with-host-libstdcxx='-static-libgcc -Wl,-lstdc++ -lm' --with-pkgversion='GNU Tools for ARM Embedded Processors' --with-multilib-list=armv6-m,armv7-m,armv7e-m,armv7-r,armv8-m.base,armv8-m.main]
+  ignore line: [Thread model: single]
+  ignore line: [gcc version 5.4.1 20160919 (release) [ARM/embedded-5-branch revision 240496] (GNU Tools for ARM Embedded Processors) ]
+  ignore line: [COMPILER_PATH=/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/:/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/:/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/bin/]
+  ignore line: [LIBRARY_PATH=/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/:/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/:/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../arm-none-eabi/lib/armv7e-m/:/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/:/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/:/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/:/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../arm-none-eabi/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m4' '-mthumb' '-mthumb-interwork' '-ffunction-sections' '-fdata-sections' '-g' '-fno-common' '-fmessage-length=0' '-specs=nosys.specs' '-specs=nano.specs' '-std=gnu99' '-T' '/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/STM32F427IIHx_FLASH.ld' '-v' '-o' 'cmTC_978aa']
+  link line: [ /usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/collect2 -plugin /usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/liblto_plugin.so -plugin-opt=/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/lto-wrapper -plugin-opt=-fresolution=/var/folders/m7/41pr8n2n6xb_qvh8c7kb1tth0000gn/T//ccMOCj21.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lg_nano -plugin-opt=-pass-through=-lc_nano -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc_nano -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc_nano -plugin-opt=-pass-through=-lnosys --sysroot=/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../arm-none-eabi -X -o cmTC_978aa /usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/crti.o /usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/crtbegin.o /usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/crt0.o -L/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m -L/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m -L/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../arm-none-eabi/lib/armv7e-m -L/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1 -L/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc -L/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib -L/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../arm-none-eabi/lib -gc-sections CMakeFiles/cmTC_978aa.dir/CMakeCCompilerABI.c.obj --start-group -lgcc -lg_nano -lc_nano --end-group --start-group -lgcc -lc_nano -lnosys --end-group --start-group -lgcc -lc_nano -lnosys --end-group /usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/crtend.o /usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/crtn.o -T /Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/STM32F427IIHx_FLASH.ld]
+    arg [/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/var/folders/m7/41pr8n2n6xb_qvh8c7kb1tth0000gn/T//ccMOCj21.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lg_nano] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc_nano] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc_nano] ==> ignore
+    arg [-plugin-opt=-pass-through=-lnosys] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc_nano] ==> ignore
+    arg [-plugin-opt=-pass-through=-lnosys] ==> ignore
+    arg [--sysroot=/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../arm-none-eabi] ==> ignore
+    arg [-X] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_978aa] ==> ignore
+    arg [/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/crti.o] ==> ignore
+    arg [/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/crtbegin.o] ==> ignore
+    arg [/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/crt0.o] ==> ignore
+    arg [-L/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m] ==> dir [/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m]
+    arg [-L/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m] ==> dir [/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m]
+    arg [-L/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../arm-none-eabi/lib/armv7e-m] ==> dir [/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../arm-none-eabi/lib/armv7e-m]
+    arg [-L/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1] ==> dir [/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1]
+    arg [-L/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc] ==> dir [/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc]
+    arg [-L/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib] ==> dir [/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib]
+    arg [-L/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../arm-none-eabi/lib] ==> dir [/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../arm-none-eabi/lib]
+    arg [-gc-sections] ==> ignore
+    arg [CMakeFiles/cmTC_978aa.dir/CMakeCCompilerABI.c.obj] ==> ignore
+    arg [--start-group] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lg_nano] ==> lib [g_nano]
+    arg [-lc_nano] ==> lib [c_nano]
+    arg [--end-group] ==> ignore
+    arg [--start-group] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc_nano] ==> lib [c_nano]
+    arg [-lnosys] ==> lib [nosys]
+    arg [--end-group] ==> ignore
+    arg [--start-group] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc_nano] ==> lib [c_nano]
+    arg [-lnosys] ==> lib [nosys]
+    arg [--end-group] ==> ignore
+    arg [/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/crtend.o] ==> ignore
+    arg [/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/crtn.o] ==> ignore
+    arg [-T] ==> ignore
+    arg [/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/STM32F427IIHx_FLASH.ld] ==> ignore
+  collapse library dir [/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m] ==> [/usr/local/Cellar/gcc-arm-none-eabi/20160928/lib/gcc/arm-none-eabi/5.4.1/armv7e-m]
+  collapse library dir [/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m] ==> [/usr/local/Cellar/gcc-arm-none-eabi/20160928/arm-none-eabi/lib/armv7e-m]
+  collapse library dir [/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../arm-none-eabi/lib/armv7e-m] ==> [/usr/local/Cellar/gcc-arm-none-eabi/20160928/arm-none-eabi/lib/armv7e-m]
+  collapse library dir [/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1] ==> [/usr/local/Cellar/gcc-arm-none-eabi/20160928/lib/gcc/arm-none-eabi/5.4.1]
+  collapse library dir [/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc] ==> [/usr/local/Cellar/gcc-arm-none-eabi/20160928/lib/gcc]
+  collapse library dir [/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib] ==> [/usr/local/Cellar/gcc-arm-none-eabi/20160928/arm-none-eabi/lib]
+  collapse library dir [/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../arm-none-eabi/lib] ==> [/usr/local/Cellar/gcc-arm-none-eabi/20160928/arm-none-eabi/lib]
+  implicit libs: [gcc;g_nano;c_nano;gcc;c_nano;nosys;gcc;c_nano;nosys]
+  implicit dirs: [/usr/local/Cellar/gcc-arm-none-eabi/20160928/lib/gcc/arm-none-eabi/5.4.1/armv7e-m;/usr/local/Cellar/gcc-arm-none-eabi/20160928/arm-none-eabi/lib/armv7e-m;/usr/local/Cellar/gcc-arm-none-eabi/20160928/lib/gcc/arm-none-eabi/5.4.1;/usr/local/Cellar/gcc-arm-none-eabi/20160928/lib/gcc;/usr/local/Cellar/gcc-arm-none-eabi/20160928/arm-none-eabi/lib]
+  implicit fwks: []
+
+
+
+
+Detecting C [-std=c11] compiler features compiled with the following output:
+Change Dir: /Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_648f6/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_648f6.dir/build.make CMakeFiles/cmTC_648f6.dir/build
+Building C object CMakeFiles/cmTC_648f6.dir/feature_tests.c.obj
+/usr/local/bin/arm-none-eabi-gcc   -mcpu=cortex-m4  -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -g -fno-common -fmessage-length=0 -specs=nosys.specs -specs=nano.specs -std=gnu99    -std=c11 -o CMakeFiles/cmTC_648f6.dir/feature_tests.c.obj   -c /Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_648f6
+/Applications/CLion.app/Contents/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_648f6.dir/link.txt --verbose=1
+/usr/local/bin/arm-none-eabi-gcc -mcpu=cortex-m4  -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -g -fno-common -fmessage-length=0 -specs=nosys.specs -specs=nano.specs -std=gnu99   -Wl,-gc-sections -T /Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/STM32F427IIHx_FLASH.ld  CMakeFiles/cmTC_648f6.dir/feature_tests.c.obj  -o cmTC_648f6 
+/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol Reset_Handler; defaulting to 0000000008000000
+
+
+
+
+Detecting C [-std=c99] compiler features compiled with the following output:
+Change Dir: /Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3dbcb/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_3dbcb.dir/build.make CMakeFiles/cmTC_3dbcb.dir/build
+Building C object CMakeFiles/cmTC_3dbcb.dir/feature_tests.c.obj
+/usr/local/bin/arm-none-eabi-gcc   -mcpu=cortex-m4  -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -g -fno-common -fmessage-length=0 -specs=nosys.specs -specs=nano.specs -std=gnu99    -std=c99 -o CMakeFiles/cmTC_3dbcb.dir/feature_tests.c.obj   -c /Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_3dbcb
+/Applications/CLion.app/Contents/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3dbcb.dir/link.txt --verbose=1
+/usr/local/bin/arm-none-eabi-gcc -mcpu=cortex-m4  -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -g -fno-common -fmessage-length=0 -specs=nosys.specs -specs=nano.specs -std=gnu99   -Wl,-gc-sections -T /Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/STM32F427IIHx_FLASH.ld  CMakeFiles/cmTC_3dbcb.dir/feature_tests.c.obj  -o cmTC_3dbcb 
+/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol Reset_Handler; defaulting to 0000000008000000
+
+
+
+
+Detecting C [-std=c90] compiler features compiled with the following output:
+Change Dir: /Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_cbdd5/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_cbdd5.dir/build.make CMakeFiles/cmTC_cbdd5.dir/build
+Building C object CMakeFiles/cmTC_cbdd5.dir/feature_tests.c.obj
+/usr/local/bin/arm-none-eabi-gcc   -mcpu=cortex-m4  -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -g -fno-common -fmessage-length=0 -specs=nosys.specs -specs=nano.specs -std=gnu99    -std=c90 -o CMakeFiles/cmTC_cbdd5.dir/feature_tests.c.obj   -c /Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_cbdd5
+/Applications/CLion.app/Contents/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cbdd5.dir/link.txt --verbose=1
+/usr/local/bin/arm-none-eabi-gcc -mcpu=cortex-m4  -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -g -fno-common -fmessage-length=0 -specs=nosys.specs -specs=nano.specs -std=gnu99   -Wl,-gc-sections -T /Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/STM32F427IIHx_FLASH.ld  CMakeFiles/cmTC_cbdd5.dir/feature_tests.c.obj  -o cmTC_cbdd5 
+/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol Reset_Handler; defaulting to 0000000008000000
+
+

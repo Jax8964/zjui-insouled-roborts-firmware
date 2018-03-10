@@ -23,7 +23,7 @@
  *  @copyright 2017 DJI RoboMaster. All rights reserved.
  *
  */
-	
+
 #ifndef __BSP_CAN_H__
 #define __BSP_CAN_H__
 
@@ -37,7 +37,7 @@ typedef enum
   CAN_3510_M3_ID       = 0x203,
   CAN_3510_M4_ID       = 0x204,
   CAN_YAW_MOTOR_ID     = 0x205,
-  CAN_PIT_MOTOR_ID     = 0x206, 
+  CAN_PIT_MOTOR_ID     = 0x206,
   CAN_TRIGGER_MOTOR_ID = 0x207,
   CAN_CHASSIS_ZGYRO_ID = 0x401,
   CAN_GIMBAL_ZGYRO_ID  = 0x402,
@@ -52,21 +52,24 @@ typedef enum
 #define FILTER_BUF 5
 typedef struct
 {
-  uint16_t ecd;
-  uint16_t last_ecd;
-  
-  int16_t  speed_rpm;
-  int16_t  given_current;
+  uint16_t ecd; //角度原始值（0~8191）
+  uint16_t last_ecd; //上次角度原始值
 
-  int32_t  round_cnt;
-  int32_t  total_ecd;
-  int32_t  total_angle;
-  
+  int16_t  speed_rpm; //转子转速（单位RPM）
+  int16_t  given_current; //实际转矩电流
+
+
+  int32_t  round_cnt; //旋转过的圈数
+  int32_t  total_ecd; //相对于初始位置的角度原始值
+  int32_t  total_angle; //相对于初始位置的角度
+
   uint16_t offset_ecd;
-  uint32_t msg_cnt;
-  
-  int32_t  ecd_raw_rate;
-  int32_t  rate_buf[FILTER_BUF];
+  uint32_t msg_cnt; //接收信号计数
+
+  int32_t  ecd_raw_rate; //角度原始值改变量
+
+	//EC60底盘电机所需参数
+	int32_t  rate_buf[FILTER_BUF];
   uint8_t  buf_cut;
   int32_t  filter_rate;
 } moto_measure_t;

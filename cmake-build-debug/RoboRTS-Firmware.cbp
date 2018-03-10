@@ -1,0 +1,689 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="RoboRTS-Firmware"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="UPLOAD">
+				<Option working_dir="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/cmake-build-debug/Makefile&quot;  VERBOSE=1 UPLOAD"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="RoboRTS-Firmware.elf">
+				<Option output="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/cmake-build-debug/RoboRTS-Firmware.elf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DUSE_HAL_DRIVER"/>
+					<Add option="-DSTM32F427xx"/>
+					<Add option="-D__weak=__attribute__((weak))"/>
+					<Add option="-D__packed=__attribute__((__packed__))"/>
+					<Add directory="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Inc"/>
+					<Add directory="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/STM32F4xx_HAL_Driver/Inc"/>
+					<Add directory="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"/>
+					<Add directory="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FatFs/src/drivers"/>
+					<Add directory="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"/>
+					<Add directory="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/CMSIS/Device/ST/STM32F4xx/Include"/>
+					<Add directory="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FatFs/src"/>
+					<Add directory="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/include"/>
+					<Add directory="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS"/>
+					<Add directory="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/CMSIS/Include"/>
+					<Add directory="/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/include"/>
+					<Add directory="/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/include-fixed"/>
+					<Add directory="/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/cmake-build-debug/Makefile&quot;  VERBOSE=1 RoboRTS-Firmware.elf"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="RoboRTS-Firmware.elf/fast">
+				<Option output="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/cmake-build-debug/RoboRTS-Firmware.elf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DUSE_HAL_DRIVER"/>
+					<Add option="-DSTM32F427xx"/>
+					<Add option="-D__weak=__attribute__((weak))"/>
+					<Add option="-D__packed=__attribute__((__packed__))"/>
+					<Add directory="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Inc"/>
+					<Add directory="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/STM32F4xx_HAL_Driver/Inc"/>
+					<Add directory="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"/>
+					<Add directory="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FatFs/src/drivers"/>
+					<Add directory="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"/>
+					<Add directory="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/CMSIS/Device/ST/STM32F4xx/Include"/>
+					<Add directory="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FatFs/src"/>
+					<Add directory="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/include"/>
+					<Add directory="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS"/>
+					<Add directory="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/CMSIS/Include"/>
+					<Add directory="/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/include"/>
+					<Add directory="/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/include-fixed"/>
+					<Add directory="/usr/local/Cellar/gcc-arm-none-eabi/20160928/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/cmake-build-debug/Makefile&quot;  VERBOSE=1 RoboRTS-Firmware.elf/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/.DS_Store">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f427xx.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/CMSIS/Include/arm_common_tables.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/CMSIS/Include/arm_const_structs.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/CMSIS/Include/arm_math.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/CMSIS/Include/cmsis_armcc.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/CMSIS/Include/cmsis_armcc_V6.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/CMSIS/Include/cmsis_gcc.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/CMSIS/Include/core_cm0.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/CMSIS/Include/core_cm0plus.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/CMSIS/Include/core_cm3.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/CMSIS/Include/core_cm4.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/CMSIS/Include/core_cm7.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/CMSIS/Include/core_cmFunc.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/CMSIS/Include/core_cmInstr.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/CMSIS/Include/core_cmSimd.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/CMSIS/Include/core_sc000.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/CMSIS/Include/core_sc300.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/STM32F4xx_HAL_Driver/.DS_Store">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_can.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sd.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_sdmmc.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc_ex.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sd.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_sdmmc.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Inc/FreeRTOSConfig.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Inc/bsp_driver_sd.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Inc/can.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Inc/dma.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Inc/fatfs.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Inc/ffconf.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Inc/gpio.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Inc/main.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Inc/rtc.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Inc/sdio.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Inc/spi.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Inc/stm32f4xx_hal_conf.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Inc/stm32f4xx_it.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Inc/tim.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Inc/usart.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/.DS_Store">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/.DS_Store">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FatFs/.DS_Store">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FatFs/src/.DS_Store">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FatFs/src/diskio.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FatFs/src/diskio.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FatFs/src/drivers/sd_diskio.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FatFs/src/drivers/sd_diskio.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FatFs/src/ff.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FatFs/src/ff.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FatFs/src/ff_gen_drv.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FatFs/src/ffconf_template.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FatFs/src/integer.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FatFs/src/option/cc936.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FatFs/src/option/syscall.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/.DS_Store">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/.DS_Store">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/croutine.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOSConfig_template.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/include/StackMacros.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/include/croutine.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/include/list.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/include/portable.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/include/queue.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/include/stdint.readme">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/include/task.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/list.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/.DS_Store">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/.DS_Store">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0/port.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0/portmacro.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/portmacro.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3_MPU/port.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3_MPU/portmacro.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/.DS_Store">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/ReadMe.txt">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1/port.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1/portmacro.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/IAR/.DS_Store">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/IAR/ARM_CM0/port.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/IAR/ARM_CM0/portasm.s">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/IAR/ARM_CM0/portmacro.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/IAR/ARM_CM3/port.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/IAR/ARM_CM3/portasm.s">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/IAR/ARM_CM3/portmacro.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/IAR/ARM_CM4F/port.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/IAR/ARM_CM4F/portasm.s">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/IAR/ARM_CM4F/portmacro.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/IAR/ARM_CM7/.DS_Store">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/IAR/ARM_CM7/ReadMe.txt">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/IAR/ARM_CM7/r0p1/port.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/IAR/ARM_CM7/r0p1/portasm.s">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/IAR/ARM_CM7/r0p1/portmacro.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/Keil/See-also-the-RVDS-directory.txt">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_1.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_2.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_3.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_5.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/.DS_Store">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0/port.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0/portmacro.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/port.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/port.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM7/ReadMe.txt">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM7/r0p1/port.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM7/r0p1/portmacro.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/Tasking/.DS_Store">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/Tasking/ARM_CM4F/port.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/Tasking/ARM_CM4F/port_asm.asm">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/Tasking/ARM_CM4F/portmacro.h">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/portable/readme.txt">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/queue.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/st_readme.txt">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/tasks.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Middlewares/Third_Party/FreeRTOS/Source/timers.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/STM32F427IIHx_FLASH.ld">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Src/bsp_driver_sd.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Src/can.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Src/dma.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Src/fatfs.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Src/freertos.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Src/gpio.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Src/main.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Src/rtc.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Src/sdio.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Src/spi.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Src/stm32f4xx_hal_msp.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Src/stm32f4xx_hal_timebase_TIM.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Src/stm32f4xx_it.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Src/system_stm32f4xx.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Src/tim.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/Src/usart.c">
+			<Option target="RoboRTS-Firmware.elf"/>
+		</Unit>
+		<Unit filename="/Users/liuzikai/Files/RoboMaster/RoboRTS-Firmware/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
