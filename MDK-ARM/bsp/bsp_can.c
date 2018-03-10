@@ -49,7 +49,7 @@ void HAL_CAN_RxCpltCallback(CAN_HandleTypeDef* _hcan)
     case CAN_3510_M3_ID:
     case CAN_3510_M4_ID:
     {
-      static uint8_t i;
+      static uint8_t i; //Motor index
       i = _hcan->pRxMsg->StdId - CAN_3510_M1_ID;
 
       moto_chassis[i].msg_cnt++ <= 50 ? get_moto_offset(&moto_chassis[i], _hcan) : encoder_data_handle(&moto_chassis[i], _hcan);
@@ -58,11 +58,6 @@ void HAL_CAN_RxCpltCallback(CAN_HandleTypeDef* _hcan)
     break;
     case CAN_YAW_MOTOR_ID:
     {
-      /*
-      //NOTE: Test gimbal and chassis
-      send_gimbal_cur(-1000, -1000, 0);
-      send_chassis_cur(300, 300, 300, 300);
-      */
       encoder_data_handle(&moto_yaw, _hcan);
       err_detector_hook(GIMBAL_YAW_OFFLINE);
     }

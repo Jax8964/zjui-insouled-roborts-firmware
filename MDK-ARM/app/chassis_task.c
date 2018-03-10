@@ -117,6 +117,7 @@ void chassis_task(void const *argu)
     }break;
   }
 
+  //根据
   mecanum_calc(chassis.vx, chassis.vy, chassis.vw, chassis.wheel_speed_ref);
 
   for (int i = 0; i < 4; i++)
@@ -131,7 +132,6 @@ void chassis_task(void const *argu)
 
   memcpy(glb_cur.chassis_cur, chassis.current, sizeof(chassis.current));
 
-  //NOTE: Waiting Flags
   //osSignalSet(can_msg_send_task_t, CHASSIS_MOTOR_MSG_SEND);
 
   //chassis_stack_surplus = uxTaskGetStackHighWaterMark(NULL);

@@ -181,8 +181,15 @@ int main(void)
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
+
+    //Read rc from UART
+    get_chassis_info();
+    chassis.ctrl_mode = MANUAL_SEPARATE_GIMBAL;
     chassis_task(NULL);
 
+    send_chassis_motor_ctrl_message(glb_cur.chassis_cur);
+
+    HAL_Delay(10);
   }
   /* USER CODE END 3 */
 
