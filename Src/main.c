@@ -79,6 +79,8 @@
 #include "comm_task.h"
 #include "sys_config.h"
 #include "chassis_task.h"
+
+#include <stdio.h>
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
@@ -99,6 +101,7 @@ void MX_FREERTOS_Init(void);
 
 /* USER CODE BEGIN 0 */
 
+
 /* USER CODE END 0 */
 
 int main(void)
@@ -111,7 +114,8 @@ int main(void)
   /* MCU Configuration----------------------------------------------------------*/
 
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
-  HAL_Init();
+
+	HAL_Init();
 
   /* USER CODE BEGIN Init */
 
@@ -165,19 +169,18 @@ int main(void)
   dbus_uart_init();
 
   /* USER CODE END 2 */
-
+	printf("Hello world!");
   /* Call init function for freertos objects (in freertos.c) */
   MX_FREERTOS_Init();
 
   /* Start scheduler */
   //FIXME: Can't pass! Even in the offical code.
-  osKernelStart();
+  //osKernelStart();
 
   /* We should never get here as control is now taken by the scheduler */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  
 
   while (1)
   {
