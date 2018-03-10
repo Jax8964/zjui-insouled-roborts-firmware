@@ -13,13 +13,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b22efbeb-3415-4a17-8544-9c7483cdc6fd" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/RoboRTS-Firmware.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CMakeLists_template.txt" />
+      <change beforePath="$PROJECT_DIR$/Doc/Insouled/Changes-For-Test.md" afterPath="$PROJECT_DIR$/Doc/Insouled/Changes-For-Test.md" />
+      <change beforePath="$PROJECT_DIR$/Doc/Insouled/Notes.md" afterPath="$PROJECT_DIR$/Doc/Insouled/Notes.md" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/app/chassis_task.c" afterPath="$PROJECT_DIR$/MDK-ARM/app/chassis_task.c" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/app/modeswitch_task.c" afterPath="$PROJECT_DIR$/MDK-ARM/app/modeswitch_task.c" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/app/modeswitch_task.h" afterPath="$PROJECT_DIR$/MDK-ARM/app/modeswitch_task.h" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/rm_infantry.uvprojx" afterPath="$PROJECT_DIR$/MDK-ARM/rm_infantry.uvprojx" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/rm_infantry/rm_infantry.hex" afterPath="$PROJECT_DIR$/MDK-ARM/rm_infantry/rm_infantry.hex" />
+      <change beforePath="$PROJECT_DIR$/Src/main.c" afterPath="$PROJECT_DIR$/Src/main.c" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -83,7 +84,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="809" />
@@ -180,7 +181,7 @@
     <option name="totallyTimeSpent" value="579000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="809" extended-state="1" />
+    <frame x="0" y="23" width="1440" height="809" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />

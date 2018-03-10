@@ -55,8 +55,6 @@ extern osTimerId chassis_timer_id;
 extern osTimerId gimbal_timer_id;
 void mode_switch_task(void const *argu)
 {
-  LED_G_ON;
-
   gimbal_self_check();
 
   osTimerStart(gimbal_timer_id, GIMBAL_PERIOD);
@@ -144,7 +142,7 @@ void get_main_ctrl_mode(void)
   if ((rc.sw1 == RC_DN) && (rc.sw2 == RC_DN))
     glb_ctrl_mode = SAFETY_MODE;
 
-  kb_enable_hook();
+  //kb_enable_hook();
 
 }
 
@@ -318,7 +316,8 @@ static void chassis_mode_handle(void)
   {
     case MANUAL_CTRL_MODE:
     {
-      chassis.ctrl_mode = MANUAL_FOLLOW_GIMBAL;
+      //chassis.ctrl_mode = MANUAL_FOLLOW_GIMBAL;
+      chassis.ctrl_mode = MANUAL_SEPARATE_GIMBAL;
 
       /* keyboard trigger chassis twist mode */
       if (km.twist_ctrl)

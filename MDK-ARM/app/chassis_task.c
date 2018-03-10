@@ -147,7 +147,7 @@ void chassis_task(void const *argu)
     }break;
   }
 
-  //根据
+  //根据vx, vy, vw计算wheel_speed_ref
   mecanum_calc(chassis.vx, chassis.vy, chassis.vw, chassis.wheel_speed_ref);
 
   for (int i = 0; i < 4; i++)

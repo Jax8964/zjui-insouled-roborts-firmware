@@ -38,9 +38,9 @@ typedef enum
 
 void mode_switch_task(void const *argu);
 
-static void get_main_ctrl_mode(void);
+void get_main_ctrl_mode(void);
 static void get_gimbal_mode(void);
-static void get_chassis_mode(void);
+void get_chassis_mode(void);
 static void get_shoot_mode(void);
 
 static void get_global_last_mode(void);

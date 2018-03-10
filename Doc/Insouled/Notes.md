@@ -24,10 +24,6 @@ chassis_task()[OS]
 
 
 
-<<<<<<< HEAD
-#### pid
-计算pid的基础过程
-=======
 ### modeswitch_task
 全局模式共有四种：
 MANUAL_CTRL_MODE   =
@@ -49,7 +45,6 @@ sw2 右边手杆
 
 
 mode_switch_task():[OS]
->>>>>>> 5003331853f9b98022a443ccf8bed00ea6983cd6
 
 get_chassis_mode():
 --如果底盘模式是躲避模式，则让twist_count(大概是用来计算已经转了多 少角度的计数器)清零。
@@ -57,9 +52,9 @@ get_chassis_mode():
   否则，进入chassis_mode_handle()。
 
 chassis_mode_handle():
---全局控制模式 = 手动模式：
-    底盘模式变为手动模式底盘跟随云台
-    如果km.twist_ctrl(大概与键盘输入有关)=1，则底盘模式变为躲避模式
+--全局控制模式 = 手动模式 MANUAL_CTRL_MODE：
+    底盘模式变为手动模式底盘跟随云台 MANUAL_FOLLOW_GIMBAL
+    如果km.twist_ctrl(大概与键盘输入有关)=1，则底盘模式变为躲避模式 DODGE_MODE
   全局控制模式 = 半手动模式：
     左边手杆 上或中：接受来自电脑输入的底盘模式
     左边手杆 下   ：底盘模式=停止模式
