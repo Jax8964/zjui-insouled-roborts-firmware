@@ -85,14 +85,6 @@ void mode_switch_task(void const *argu)
 
 }
 
-static void kb_enable_hook(void)
-{
-  if (rc.sw1 == RC_MI && rc.sw2 == RC_UP)
-    km.kb_enable = 1;
-  else
-    km.kb_enable = 0;
-
-}
 void get_main_ctrl_mode(void)
 {
   //host PC has been connected
@@ -144,8 +136,11 @@ void get_main_ctrl_mode(void)
   if ((rc.sw1 == RC_DN) && (rc.sw2 == RC_DN))
     glb_ctrl_mode = SAFETY_MODE;
 
-  kb_enable_hook();
-
+  //kb_enable_hook();
+  if (rc.sw1 == RC_MI && rc.sw2 == RC_UP)
+    km.kb_enable = 1;
+  else
+    km.kb_enable = 0;
 }
 
 

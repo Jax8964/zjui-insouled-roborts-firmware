@@ -42,8 +42,22 @@ sw2 右边手杆
 
 mode_switch_task():[OS]
 
+get_main_ctrl_mode():
+--如果电脑连接：
+  右拨杆 上 MANUAL_CTRL_MODE 手动
+        ## SAFETY_MODE      安全
+        中 SEMI_AUTO_MODE   半手动
+        下 AUTO_CTRL_MODE   自动
+--如果电脑没有连接：
+  右拨杆 上:     手动
+        中下:   安全
+--如果左拨杆 下 并且 右拨杆 下：
+    安全模式
+--kb_enable_hook();
+  左中 并且 右上 则 km.kb_enable = 1
+
 get_chassis_mode():
---如果底盘模式是躲避模式，则让twist_count(大概是用来计算已经转了多 少角度的计数器)清零。
+--如果底盘模式是躲避模式，则   让twist_count(大概是用来计算已经转了多少角度的计数器)清零。
 --如果云台模式正在初始化，则让底盘模式变为停止模式
   否则，进入chassis_mode_handle()。
 
