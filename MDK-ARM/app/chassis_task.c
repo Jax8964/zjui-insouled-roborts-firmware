@@ -53,7 +53,7 @@ UBaseType_t chassis_stack_surplus;
 
 /* chassis task global parameter */
 chassis_t chassis;
-
+uint32_t twist_count;
 uint32_t chassis_time_last;
 int chassis_time_ms;
 extern TaskHandle_t can_msg_send_task_t;
@@ -71,7 +71,13 @@ void chassis_task(void const *argu)
     {
       chassis.vx = 0;
       chassis.vy = 0;
-      chassis_twist_handle();
+
+      //chassis_twist_handle();
+      static int16_t twist_period = TWIST_PERIOD/CHASSIS_PERIOD;
+      static int16_t twist_angle  = TWIST_ANGLE;
+      twist_count++;
+      chassis.position_ref = twist_angle*sin(2*PI/twist_period*twist_count);
+      chassis.vw = pid_calc(&pid_chassis_angle, gim.sensor.yaw_relative_angle, chassis.position_ref);
     }break;
 
     case AUTO_FOLLOW_GIMBAL:
@@ -98,22 +104,46 @@ void chassis_task(void const *argu)
 
     case CHASSIS_STOP:
     {
-      chassis_stop_handle();
+      //chassis_stop_handle();
+      chassis.vy = 0;
+      chassis.vx = 0;
+      chassis.vw = 0;
     }break;
 
     case MANUAL_SEPARATE_GIMBAL:
     {
-      separate_gimbal_handle();
+      //separate_gimbal_handle();
+      chassis.vy = rm.vy * CHASSIS_RC_MOVE_RATIO_Y + km.vy * CHASSIS_KB_MOVE_RATIO_Y;
+      chassis.vx = rm.vx * CHASSIS_RC_MOVE_RATIO_X + km.vx * CHASSIS_KB_MOVE_RATIO_X;
+      chassis.vw = rm.vw * CHASSIS_RC_MOVE_RATIO_R;
     }break;
 
     case MANUAL_FOLLOW_GIMBAL:
     {
-      follow_gimbal_handle();
+      //follow_gimbal_handle();
+      chassis.position_ref = 0;
+
+      chassis.vy = rm.vy * CHASSIS_RC_MOVE_RATIO_Y + km.vy * CHASSIS_KB_MOVE_RATIO_Y;
+      chassis.vx = rm.vx * CHASSIS_RC_MOVE_RATIO_X + km.vx * CHASSIS_KB_MOVE_RATIO_X;
+
+      if (chassis.follow_gimbal)
+        chassis.vw = pid_calc(&pid_chassis_angle, gim.sensor.yaw_relative_angle, chassis.position_ref);
+      else
+        chassis.vw = 0;
+//  if ((gim.ctrl_mode == GIMBAL_FOLLOW_ZGYRO)
+//   || ((gim.ctrl_mode == GIMBAL_NO_ARTI_INPUT) && (gim.input.no_action_flag == 1)))
+//     chassis.vw = pid_calc(&pid_chassis_angle, gim.sensor.yaw_relative_angle, 0);
+//  else
+//    chassis.vw = 0;
+
     }break;
 
     default:
     {
-      chassis_stop_handle();
+      //chassis_stop_handle();
+      chassis.vy = 0;
+      chassis.vx = 0;
+      chassis.vw = 0;
     }break;
   }
 
@@ -137,48 +167,6 @@ void chassis_task(void const *argu)
   //chassis_stack_surplus = uxTaskGetStackHighWaterMark(NULL);
 }
 
-
-void chassis_stop_handle(void)
-{
-  chassis.vy = 0;
-  chassis.vx = 0;
-  chassis.vw = 0;
-}
-
-uint32_t twist_count;
-static void chassis_twist_handle(void)
-{
-  static int16_t twist_period = TWIST_PERIOD/CHASSIS_PERIOD;
-  static int16_t twist_angle  = TWIST_ANGLE;
-  twist_count++;
-  chassis.position_ref = twist_angle*sin(2*PI/twist_period*twist_count);
-  chassis.vw = pid_calc(&pid_chassis_angle, gim.sensor.yaw_relative_angle, chassis.position_ref);
-}
-void separate_gimbal_handle(void)
-{
-  chassis.vy = rm.vy * CHASSIS_RC_MOVE_RATIO_Y + km.vy * CHASSIS_KB_MOVE_RATIO_Y;
-  chassis.vx = rm.vx * CHASSIS_RC_MOVE_RATIO_X + km.vx * CHASSIS_KB_MOVE_RATIO_X;
-  chassis.vw = rm.vw * CHASSIS_RC_MOVE_RATIO_R;
-}
-void follow_gimbal_handle(void)
-{
-  chassis.position_ref = 0;
-
-  chassis.vy = rm.vy * CHASSIS_RC_MOVE_RATIO_Y + km.vy * CHASSIS_KB_MOVE_RATIO_Y;
-  chassis.vx = rm.vx * CHASSIS_RC_MOVE_RATIO_X + km.vx * CHASSIS_KB_MOVE_RATIO_X;
-
-  if (chassis.follow_gimbal)
-    chassis.vw = pid_calc(&pid_chassis_angle, gim.sensor.yaw_relative_angle, chassis.position_ref);
-  else
-    chassis.vw = 0;
-
-//  if ((gim.ctrl_mode == GIMBAL_FOLLOW_ZGYRO)
-//   || ((gim.ctrl_mode == GIMBAL_NO_ARTI_INPUT) && (gim.input.no_action_flag == 1)))
-//     chassis.vw = pid_calc(&pid_chassis_angle, gim.sensor.yaw_relative_angle, 0);
-//  else
-//    chassis.vw = 0;
-
-}
 
 /**
   * @brief mecanum chassis velocity decomposition

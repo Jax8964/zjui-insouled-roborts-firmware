@@ -23,7 +23,7 @@
  *  @copyright 2017 DJI RoboMaster. All rights reserved.
  *
  */
-	
+
 #ifndef __CHASSIS_TASK_H__
 #define __CHASSIS_TASK_H__
 
@@ -48,10 +48,10 @@ typedef struct
 {
   float           vx; // forward/back
   float           vy; // left/right
-  float           vw; // 
+  float           vw; //
   int16_t         rotate_x_offset;
   int16_t         rotate_y_offset;
-  
+
   chassis_mode_e  ctrl_mode;
   chassis_mode_e  last_ctrl_mode;
 
@@ -61,7 +61,7 @@ typedef struct
   int16_t         wheel_speed_fdb[4];
   int16_t         wheel_speed_ref[4];
   int16_t         current[4];
-  
+
   int16_t         position_ref;
   uint8_t         follow_gimbal;
 } chassis_t;
@@ -72,10 +72,6 @@ void chassis_task(void const *argu);
 void chassis_param_init(void);
 void power_limit_handle(void);
 
-static void chassis_twist_handle(void);
-static void chassis_stop_handle(void);
-static void separate_gimbal_handle(void);
-static void follow_gimbal_handle(void);
 
 static void mecanum_calc(float vx, float vy, float vw, int16_t speed[]);
 
