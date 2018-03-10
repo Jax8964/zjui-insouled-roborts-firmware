@@ -23,7 +23,7 @@
  *  @copyright 2017 DJI RoboMaster. All rights reserved.
  *
  */
- 
+
 #include "modeswitch_task.h"
 #include "info_get_task.h"
 #include "remote_ctrl.h"
@@ -40,6 +40,9 @@
 #include "stdlib.h"
 #include "cmsis_os.h"
 
+//NOTE: added
+#include "led.h"
+
 /* stack usage monitor */
 UBaseType_t mode_stack_surplus;
 
@@ -52,28 +55,30 @@ extern osTimerId chassis_timer_id;
 extern osTimerId gimbal_timer_id;
 void mode_switch_task(void const *argu)
 {
+  LED_G_ON;
+
   gimbal_self_check();
-  
+
   osTimerStart(gimbal_timer_id, GIMBAL_PERIOD);
   osTimerStart(chassis_timer_id, CHASSIS_PERIOD);
-  
+
   uint32_t mode_wake_time = osKernelSysTick();
   while (1)
   {
     taskENTER_CRITICAL();
-    
+
     get_main_ctrl_mode();
-    
+
     get_chassis_mode();
     get_gimbal_mode();
     get_shoot_mode();
-    
+
     get_global_last_mode();
-    
+
     taskEXIT_CRITICAL();
-    
+
     osSignalSet(info_get_task_t, INFO_GET_EXE_SIGNAL);
-    
+
     mode_stack_surplus = uxTaskGetStackHighWaterMark(NULL);
     osDelayUntil(&mode_wake_time, INFO_GET_PERIOD);
   }
@@ -99,19 +104,19 @@ void get_main_ctrl_mode(void)
       {
         glb_ctrl_mode = MANUAL_CTRL_MODE;
       }break;
-      
+
 #ifdef AUTO_NAVIGATION
       case RC_MI:
       {
         glb_ctrl_mode = SEMI_AUTO_MODE;
       }break;
-      
+
       case RC_DN:
       {
         glb_ctrl_mode = AUTO_CTRL_MODE;
       }break;
 #endif
-      
+
       default:
       {
         glb_ctrl_mode = SAFETY_MODE;
@@ -127,20 +132,20 @@ void get_main_ctrl_mode(void)
       {
         glb_ctrl_mode = MANUAL_CTRL_MODE;
       }break;
-      
+
       default:
       {
         glb_ctrl_mode = SAFETY_MODE;
       }break;
     }
   }
-  
-  
+
+
   if ((rc.sw1 == RC_DN) && (rc.sw2 == RC_DN))
     glb_ctrl_mode = SAFETY_MODE;
-  
+
   kb_enable_hook();
-  
+
 }
 
 
@@ -171,7 +176,7 @@ static void gimbal_mode_handle(void)
     {
       if (last_glb_ctrl_mode == SEMI_AUTO_MODE)
         gim.ctrl_mode = GIMBAL_FOLLOW_ZGYRO;
-      
+
       /* no input control signal gimbal mode handle */
       if (gim.input.ac_mode == NO_ACTION)
       {
@@ -182,7 +187,7 @@ static void gimbal_mode_handle(void)
           {
             //begin no action handle
             gim.ctrl_mode = GIMBAL_NO_ARTI_INPUT;
-            
+
             gim.input.no_action_flag = 1;
             gim.input.no_action_time = HAL_GetTick();
           }
@@ -195,27 +200,27 @@ static void gimbal_mode_handle(void)
         {
           gim.ctrl_mode = GIMBAL_FOLLOW_ZGYRO;
           gim.input.no_action_flag = 0;
-          
+
           gim.pid.yaw_angle_ref = 0;
           gim.yaw_offset_angle = gim.sensor.gyro_angle;
         }
       }
-      
+
       /* manual trigger chassis twist */
       if (km.twist_ctrl)
         gim.ctrl_mode = GIMBAL_FOLLOW_ZGYRO;
-      
+
 #if 0
 //      /* manual trigger track armor */
 //      if (km.track_ctrl)
 //        gim.ctrl_mode = GIMBAL_TRACK_ARMOR;
-//      
+//
 //      /* manual trigger big buff */
 //      if (km.buff_ctrl && km.kb_enable)
 //      {
 //        gim.ctrl_mode = GIMBAL_SHOOT_BUFF;
 //        chassis.follow_gimbal = 0;
-//        
+//
 //        if (gim.last_ctrl_mode != GIMBAL_SHOOT_BUFF)
 //        {
 //          gim.auto_ctrl_cmd = CMD_CALI_FIVE;
@@ -224,11 +229,11 @@ static void gimbal_mode_handle(void)
 //      else
 //        chassis.follow_gimbal = 1;
 #endif
-      
+
       if (gim.last_ctrl_mode == GIMBAL_RELAX)
         gim.ctrl_mode = GIMBAL_FOLLOW_ZGYRO;
     }break;
-    
+
     case SEMI_AUTO_MODE:
     {
       switch (rc.sw1)
@@ -237,19 +242,19 @@ static void gimbal_mode_handle(void)
         {
           gim.ctrl_mode = GIMBAL_FOLLOW_ZGYRO;
         }break;
-        
+
         case RC_MI:
         {
           gim.ctrl_mode = GIMBAL_POSITION_MODE;
         }break;
-        
+
         default:
         {
           gim.ctrl_mode = GIMBAL_POSITION_MODE;
         }break;
       }
     }break;
-    
+
     case AUTO_CTRL_MODE:
     {
       switch (rc.sw1)
@@ -259,14 +264,14 @@ static void gimbal_mode_handle(void)
         {
           gim.ctrl_mode = (gimbal_mode_e)pc_rece_mesg.gimbal_control_data.ctrl_mode;
         }break;
-        
+
         default:
         {
           gim.ctrl_mode = GIMBAL_RELAX;
         }break;
       }
     }break;
-    
+
     default:
     {
       gim.ctrl_mode = GIMBAL_RELAX;
@@ -278,7 +283,7 @@ extern uint32_t patrol_count;
 void get_gimbal_mode(void)
 {
   gim.input.ac_mode = remote_is_action();
-  
+
   if (gim.ctrl_mode != GIMBAL_INIT)
   {
     gimbal_mode_handle();
@@ -286,7 +291,7 @@ void get_gimbal_mode(void)
 
   if (gim.ctrl_mode != GIMBAL_PATROL_MODE)
     patrol_count = 0;
-  
+
   /* gimbal back to center */
   if (gim.last_ctrl_mode == GIMBAL_RELAX && gim.ctrl_mode != GIMBAL_RELAX)
   {
@@ -314,13 +319,13 @@ static void chassis_mode_handle(void)
     case MANUAL_CTRL_MODE:
     {
       chassis.ctrl_mode = MANUAL_FOLLOW_GIMBAL;
-      
+
       /* keyboard trigger chassis twist mode */
       if (km.twist_ctrl)
         chassis.ctrl_mode = DODGE_MODE;
 
     }break;
-    
+
     case SEMI_AUTO_MODE:
     {
       switch (rc.sw1)
@@ -329,21 +334,21 @@ static void chassis_mode_handle(void)
         {
           chassis.ctrl_mode = DODGE_MODE;
         }break;
-        
+
         case RC_MI:
         {
           chassis.ctrl_mode = MANUAL_SEPARATE_GIMBAL;
         }break;
-        
+
         case RC_DN:
         {
           chassis.follow_gimbal = 1;
           chassis.ctrl_mode = MANUAL_FOLLOW_GIMBAL;
         }break;
-        
+
       }
     }break;
-    
+
     case AUTO_CTRL_MODE:
     {
       switch (rc.sw1)
@@ -353,22 +358,22 @@ static void chassis_mode_handle(void)
         {
           chassis.ctrl_mode = (chassis_mode_e)pc_rece_mesg.chassis_control_data.ctrl_mode;
         }break;
-        
+
         case RC_DN:
         {
           chassis.ctrl_mode = CHASSIS_STOP;
         }break;
-        
+
       }
     }break;
-    
+
     default:
     {
       chassis.ctrl_mode = CHASSIS_STOP;
     }break;
-    
+
   }
-  
+
 }
 extern uint32_t twist_count;
 void get_chassis_mode(void)
@@ -376,7 +381,7 @@ void get_chassis_mode(void)
 
   if (chassis.ctrl_mode != DODGE_MODE)
     twist_count = 0;
-  
+
   if (gim.ctrl_mode == GIMBAL_INIT)
   {
     chassis.ctrl_mode = CHASSIS_STOP;
@@ -385,7 +390,7 @@ void get_chassis_mode(void)
   {
     chassis_mode_handle();
   }
-  
+
 }
 
 uint8_t gimbal_is_controllable(void)
@@ -401,7 +406,7 @@ uint8_t gimbal_is_controllable(void)
 
 uint8_t chassis_is_controllable(void)
 {
-  if (chassis.ctrl_mode == CHASSIS_RELAX 
+  if (chassis.ctrl_mode == CHASSIS_RELAX
    || g_err.list[REMOTE_CTRL_OFFLINE].err_exist)
     return 0;
   else
@@ -419,22 +424,22 @@ void get_shoot_mode(void)
       else
         shot.ctrl_mode = REMOTE_CTRL_SHOT;
     }break;
-    
+
     case SEMI_AUTO_MODE:
     {
       shot.ctrl_mode = SEMIAUTO_CTRL_SHOT;
     }break;
-    
+
     case AUTO_CTRL_MODE:
     {
       shot.ctrl_mode = AUTO_CTRL_SHOT;
     }break;
-    
+
     default:
     {
       shot.ctrl_mode = SHOT_DISABLE;
     }break;
-    
+
   }
 
   if (gim.ctrl_mode == GIMBAL_RELAX)
