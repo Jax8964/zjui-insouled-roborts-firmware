@@ -23,7 +23,7 @@
  *  @copyright 2017 DJI RoboMaster. All rights reserved.
  *
  */
-  
+
 #include "imu_task.h"
 #include "gimbal_task.h"
 #include "cmsis_os.h"
@@ -98,11 +98,11 @@ static void init_quaternion(void)
       q2 = 0.83;
       q3 = -0.002;
     }
-    
+
   }
   else if (hx<0 && hy > 0) //OK
   {
-    if(fabs(temp) >= 1)   
+    if(fabs(temp) >= 1)
     {
       q0 = 0.005;
       q1 = -0.199;
@@ -116,7 +116,7 @@ static void init_quaternion(void)
       q2 = -0.83;
       q3 = -0.0023;
     }
-    
+
   }
   else if (hx > 0 && hy > 0)   //OK
   {
@@ -134,7 +134,7 @@ static void init_quaternion(void)
       q2 = -0.553;
       q3 = 0.0023;
     }
-    
+
   }
   else if (hx > 0 && hy < 0)     //OK
   {
@@ -170,7 +170,7 @@ static void init_quaternion(void)
       q2 = 0.006;
       q3 = 0.829;
     }
-    
+
   }
   else if (hx<0 && hy > 0)
   {
@@ -188,7 +188,7 @@ static void init_quaternion(void)
       q2 = -0.0115;
       q3 = 0.8313;
     }
-    
+
   }
   else if (hx>0 && hy > 0)
   {
@@ -206,7 +206,7 @@ static void init_quaternion(void)
       q2 = -0.0167;
       q3 = 0.5557;
     }
-    
+
   }
   else if (hx > 0 && hy < 0)
   {
@@ -226,7 +226,7 @@ static void init_quaternion(void)
     }
   }
   #endif
-   
+
 }
 
 float halfT;
@@ -234,7 +234,7 @@ float Kp  = 2.0, Ki = 0.01;
 
 //#define Kp 2.0f    // proportional gain governs rate of convergence to accelerometer/magnetometer
 //#define Ki 0.01f   // integral gain governs rate of convergence of gyroscope biases
-static void imu_AHRS_update(void) 
+void imu_AHRS_update(void)
 {
   float norm;
   float hx, hy, hz, bx, bz;
@@ -284,7 +284,7 @@ static void imu_AHRS_update(void)
   hy = 2.0f*mx*(q1q2 + q0q3) + 2.0f*my*(0.5f - q1q1 - q3q3) + 2.0f*mz*(q2q3 - q0q1);
   hz = 2.0f*mx*(q1q3 - q0q2) + 2.0f*my*(q2q3 + q0q1) + 2.0f*mz*(0.5f - q1q1 - q2q2);
   bx = sqrt((hx*hx) + (hy*hy));
-  bz = hz; 
+  bz = hz;
 
   // estimated direction of gravity and flux (v and w)
   vx = 2.0f*(q1q3 - q0q2);
@@ -292,7 +292,7 @@ static void imu_AHRS_update(void)
   vz = q0q0 - q1q1 - q2q2 + q3q3;
   wx = 2.0f*bx*(0.5f - q2q2 - q3q3) + 2.0f*bz*(q1q3 - q0q2);
   wy = 2.0f*bx*(q1q2 - q0q3) + 2.0f*bz*(q0q1 + q2q3);
-  wz = 2.0f*bx*(q0q2 + q1q3) + 2.0f*bz*(0.5f - q1q1 - q2q2);  
+  wz = 2.0f*bx*(q0q2 + q1q3) + 2.0f*bz*(0.5f - q1q1 - q2q2);
 
   // error is sum of cross product between reference direction of fields and direction measured by sensors
   ex = (ay*vz - az*vy) + (my*wz - mz*wy);
@@ -309,11 +309,11 @@ static void imu_AHRS_update(void)
       gy = gy + Kp*ey + eyInt;
       gz = gz + Kp*ez + ezInt;
   }
-  // 
+  //
   tempq0 = q0 + (-q1*gx - q2*gy - q3*gz)*halfT;
   tempq1 = q1 + (q0*gx + q2*gz - q3*gy)*halfT;
   tempq2 = q2 + (q0*gy - q1*gz + q3*gx)*halfT;
-  tempq3 = q3 + (q0*gz + q1*gy - q2*gx)*halfT;  
+  tempq3 = q3 + (q0*gz + q1*gy - q2*gx)*halfT;
 
   //normalise quaternion
   norm = invSqrt(tempq0*tempq0 + tempq1*tempq1 + tempq2*tempq2 + tempq3*tempq3);
@@ -324,24 +324,24 @@ static void imu_AHRS_update(void)
 
 }
 
-static void imu_attitude_update(void)
+void imu_attitude_update(void)
 {
   imu.rol = atan2(2*q2*q3 + 2*q0*q1, -2*q1*q1 - 2*q2*q2 + 1)* 57.3; // roll       -pi----pi
-  imu.pit = asin(-2*q1*q3 + 2*q0*q2)* 57.3;                         // pitch    -pi/2----pi/2 
+  imu.pit = asin(-2*q1*q3 + 2*q0*q2)* 57.3;                         // pitch    -pi/2----pi/2
   imu.yaw = atan2(2*q1*q2 + 2*q0*q3, -2*q2*q2 - 2*q3*q3 + 1)* 57.3; // yaw        -pi----pi
-  
-  
+
+
   if (imu.yaw - atti.last_yaw > 330)
     atti.yaw_cnt--;
   else if (imu.yaw - atti.last_yaw < -330)
     atti.yaw_cnt++;
-  
+
   atti.last_yaw = imu.yaw;
-  
+
   atti.yaw   = imu.yaw + atti.yaw_cnt*360;
   atti.pitch = imu.pit;
   atti.roll  = imu.rol;
-  
+
   gim.sensor.gyro_angle = atti.yaw;
 }
 
@@ -355,21 +355,21 @@ uint32_t imu_time_last;
 int imu_time_ms;
 void imu_task(void const *argu)
 {
-  
+
   uint32_t imu_wake_time = osKernelSysTick();
   while(1)
   {
     imu_time_ms = HAL_GetTick() - imu_time_last;
     imu_time_last = HAL_GetTick();
-    
+
     imu_temp_keep();
-    
+
     mpu_get_data();
     imu_AHRS_update();
     imu_attitude_update();
-    
+
     imu_stack_surplus = uxTaskGetStackHighWaterMark(NULL);
-    
+
     osDelayUntil(&imu_wake_time, IMU_TASK_PERIOD);
   }
 

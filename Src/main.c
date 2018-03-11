@@ -80,6 +80,8 @@
 #include "sys_config.h"
 #include "chassis_task.h"
 #include "modeswitch_task.h"
+#include "imu_task.h"
+#include "bsp_imu.h"
 
 #include <stdio.h>
 /* USER CODE END Includes */
@@ -186,15 +188,27 @@ int main(void)
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
-
-    uart_receive_handler(&huart1);
+		//HAL_CAN_Receive_IT(&hcan1, CAN_FIFO0);
+		//HAL_CAN_Receive_IT(&hcan2, CAN_FIFO0);
+		uart_receive_handler(&huart1);
     get_main_ctrl_mode();
     get_chassis_mode();
+		get_gimbal_mode();
+
+		imu_temp_keep();
+
+		mpu_get_data();
+		imu_AHRS_update();
+		imu_attitude_update();
 
     get_chassis_info();
     chassis_task(NULL);
 
+		get_gimbal_info();
+		gimbal_task(NULL);
+
     send_chassis_motor_ctrl_message(glb_cur.chassis_cur);
+		send_gimbal_motor_ctrl_message(glb_cur.gimbal_cur);
 
     HAL_Delay(10);
   }

@@ -59,7 +59,7 @@ void get_chassis_info(void)
   /* get remote and keyboard chassis control information */
   keyboard_chassis_hook();
   remote_ctrl_chassis_hook();
-  
+
   /* get chassis structure configuration parameter */
   get_structure_param();
 }
@@ -110,14 +110,14 @@ void get_shoot_info(void)
       shot.fric_wheel_spd = speed_debug;//DEFAULT_FRIC_WHEEL_SPEED;
       remote_ctrl_shoot_hook();
     }break;
-    
+
     case KEYBOARD_CTRL_SHOT:
     {
       shot.fric_wheel_spd = speed_debug;//DEFAULT_FRIC_WHEEL_SPEED;
       remote_ctrl_shoot_hook();
       keyboard_shoot_hook();
     }break;
-    
+
     case SEMIAUTO_CTRL_SHOT:
     {
       //shot.fric_wheel_run = pc_rece_mesg.shoot_control_data.fric_wheel_run;
@@ -125,7 +125,7 @@ void get_shoot_info(void)
       shot.shoot_cmd      = pc_rece_mesg.shoot_control_data.shoot_cmd;
       shot.c_shoot_cmd    = pc_rece_mesg.shoot_control_data.c_shoot_cmd;
     }break;
-    
+
     case AUTO_CTRL_SHOT:
     {
       shot.fric_wheel_run = pc_rece_mesg.shoot_control_data.fric_wheel_run;
@@ -133,7 +133,7 @@ void get_shoot_info(void)
       shot.shoot_cmd      = pc_rece_mesg.shoot_control_data.shoot_cmd;
       shot.c_shoot_cmd    = pc_rece_mesg.shoot_control_data.c_shoot_cmd;
     }break;
-    
+
     default:
     {
       shot.fric_wheel_run = 0;
@@ -142,7 +142,7 @@ void get_shoot_info(void)
     }break;
   }
   /* get remote and keyboard friction wheel control information */
-    
+
   /* get remote and keyboard shoot command information */
 }
 
@@ -160,7 +160,7 @@ void chassis_position_measure(void)
   static double last_d_x,last_d_y,last_d_w,d_x,d_y,d_w,diff_d_x,diff_d_y,diff_d_w;
   static double position_x,position_y,angle_w;
   static double v_x,v_y,w_v;
-  
+
   rotate_ratio_fr = ((glb_struct.wheel_base+glb_struct.wheel_track)/2.0f - \
                       chassis.rotate_x_offset + chassis.rotate_y_offset);
   rotate_ratio_fl = ((glb_struct.wheel_base+glb_struct.wheel_track)/2.0f - \
@@ -171,7 +171,7 @@ void chassis_position_measure(void)
                       chassis.rotate_x_offset + chassis.rotate_y_offset);
   rpm_ratio = glb_struct.wheel_perimeter*CHASSIS_DECELE_RATIO/(4*60.0f);
   ecd_ratio = glb_struct.wheel_perimeter*CHASSIS_DECELE_RATIO/(4*8192.0f);
-  
+
   last_d_x = d_x;
   last_d_y = d_y;
   last_d_w = d_w;
@@ -187,13 +187,13 @@ void chassis_position_measure(void)
   diff_d_x = d_x - last_d_x;
   diff_d_y = d_y - last_d_y;
   diff_d_w = d_w - last_d_w;
-  
+
   /* use chassis gyro angle data */
   chassis_angle = chassis.gyro_angle/RADIAN_COEF;
- 
+
   position_x += diff_d_x*cos(chassis_angle) - diff_d_y*sin(chassis_angle);
   position_y += diff_d_x*sin(chassis_angle) + diff_d_y*cos(chassis_angle);
-  
+
   angle_w += diff_d_w;
 
   position_x_mm = (int32_t)(position_x); //mm
@@ -226,7 +226,7 @@ void get_infantry_info(void)
   pc_send_mesg.chassis_information.y_speed        = v_y_mm;
   pc_send_mesg.chassis_information.x_position     = position_x_mm; //the absolute x axis position of chassis
   pc_send_mesg.chassis_information.y_position     = position_y_mm; //the absolute y axis position of chassis
-  
+
   /* gimbal */
   pc_send_mesg.gimbal_information.ctrl_mode          = gim.ctrl_mode;
   pc_send_mesg.gimbal_information.pit_relative_angle = gim.sensor.pit_relative_angle;
@@ -235,7 +235,7 @@ void get_infantry_info(void)
   pc_send_mesg.gimbal_information.yaw_absolute_angle = gim.sensor.gyro_angle;
   pc_send_mesg.gimbal_information.pit_palstance      = gim.sensor.pit_palstance; //dps
   pc_send_mesg.gimbal_information.yaw_palstance      = gim.sensor.yaw_palstance; //dps
-  
+
   /* shoot */
   pc_send_mesg.shoot_task_information.remain_bullets  = shot.remain_bullets;
   pc_send_mesg.shoot_task_information.shot_bullets    = shot.shot_bullets;
@@ -258,10 +258,10 @@ void get_infantry_info(void)
     else
       pc_send_mesg.bottom_error_data.err[i] = UNKNOWN_STATE;
   }
-  
+
   /* remote control */
   memcpy(&pc_send_mesg.remote_ctrl_data, &rc, sizeof(rc_info_t));
-  
+
   /* structure config */
   pc_send_mesg.structure_config_data.chassis_config = glb_struct.chassis_config;
   pc_send_mesg.structure_config_data.gimbal_config  = glb_struct.gimbal_config;
@@ -275,7 +275,7 @@ void get_custom_data_info(void)
 
 void send_chassis_motor_ctrl_message(int16_t chassis_cur[])
 {
-  send_chassis_cur(chassis_cur[0], chassis_cur[1], 
+  send_chassis_cur(chassis_cur[0], chassis_cur[1],
                    chassis_cur[2], chassis_cur[3]);
 }
 
@@ -296,13 +296,13 @@ uint8_t read_gimbal_offset(int32_t *pit_offset, int32_t *yaw_offset,
   {
     *pit_offset = cali_param.gim_cali_data[CALI_GIMBAL_CENTER].pitch_offset;
     *yaw_offset = cali_param.gim_cali_data[CALI_GIMBAL_CENTER].yaw_offset;
-    
+
     if (cali_param.gim_cali_data[CALI_CAMERA_CENTER].calied_done == CALIED_FLAG)
     {
       *pit_buff_offset = cali_param.gim_cali_data[CALI_CAMERA_CENTER].pitch_offset;
       *yaw_buff_offset = cali_param.gim_cali_data[CALI_CAMERA_CENTER].yaw_offset;
     }
-    
+
     return 1;
   }
   else
@@ -317,7 +317,7 @@ void get_gimbal_info(void)
   static float pit_ecd_ratio = PIT_MOTO_POSITIVE_DIR*PIT_DECELE_RATIO/ENCODER_ANGLE_RATIO;
   gim.sensor.yaw_relative_angle = yaw_ecd_ratio*get_relative_pos(moto_yaw.ecd, gim.yaw_center_offset);
   gim.sensor.pit_relative_angle = pit_ecd_ratio*get_relative_pos(moto_pit.ecd, gim.pit_center_offset);
-  
+
   /* get gimbal relative palstance */
   gim.sensor.yaw_palstance = mpu_data.gz / 16.384f; //unit: dps
   gim.sensor.pit_palstance = mpu_data.gx / 16.384f; //unit: dps
@@ -325,7 +325,7 @@ void get_gimbal_info(void)
   /* get remote and keyboard gimbal control information */
   keyboard_gimbal_hook();
   remote_ctrl_gimbal_hook();
-  
+
   /* get gimbal calibration command */
   if (gim.ctrl_mode == GIMBAL_RELAX)
   {
@@ -340,15 +340,15 @@ void no_cali_data_handle(void)
 {
   static uint8_t last_cali_type;
   memset(&glb_cur, 0, sizeof(motor_current_t));
-  
+
   while (1)
   {
     gimbal_cali_msg_hook(pc_rece_mesg.cali_cmd_data.type, last_cali_type);
     last_cali_type = pc_rece_mesg.cali_cmd_data.type;
-    
+
     send_gimbal_motor_ctrl_message(glb_cur.gimbal_cur);
     send_chassis_motor_ctrl_message(glb_cur.chassis_cur);
-    
+
     osDelay(100);
   }
 }
@@ -357,12 +357,12 @@ extern TaskHandle_t pc_unpack_task_t;
 static void gimbal_cali_msg_hook(uint8_t cur_type, uint8_t last_type)
 {
   gimbal_cali_hook(moto_pit.ecd, moto_yaw.ecd);
-  
+
   if ((last_type == GIMBAL_CALI_START) && (cur_type == GIMBAL_CALI_END))
   {
     cali_param.gim_cali_data[CALI_GIMBAL_CENTER].cali_cmd = 1;
     gimbal_cali_hook(moto_pit.ecd, moto_yaw.ecd);
-    
+
     pc_send_mesg.cali_response_data.type = 0x01;
     pc_send_mesg.cali_response_data.pitch_offset = moto_pit.ecd;
     pc_send_mesg.cali_response_data.yaw_offset   = moto_yaw.ecd;
@@ -370,12 +370,12 @@ static void gimbal_cali_msg_hook(uint8_t cur_type, uint8_t last_type)
                      sizeof(cali_response_t), UP_REG_ID);
     osSignalSet(pc_unpack_task_t, PC_UART_TX_SIGNAL);
   }
-  
+
   if ((last_type == CAMERA_CALI_START) && (cur_type == CAMERA_CALI_END))
   {
     cali_param.gim_cali_data[CALI_CAMERA_CENTER].cali_cmd = 1;
     gimbal_cali_hook(moto_pit.ecd, moto_yaw.ecd);
-    
+
     pc_send_mesg.cali_response_data.type = 0x02;
     pc_send_mesg.cali_response_data.pitch_offset = moto_pit.ecd;
     pc_send_mesg.cali_response_data.yaw_offset   = moto_yaw.ecd;
@@ -442,7 +442,7 @@ void write_uart_blocking(UART_HandleTypeDef *huart, uint8_t *p_data, uint16_t si
 }
 
 /**
-  * @brief  Receives an amount of data in non blocking mode. 
+  * @brief  Receives an amount of data in non blocking mode.
   * @param  huart: pointer to a UART_HandleTypeDef structure that contains
   *                the configuration information for the specified UART module.
   * @param  p_data: Pointer to data buffer
@@ -462,7 +462,7 @@ void uart_read_completed_signal(UART_HandleTypeDef *huart)
 }
 
 /**
-  * @brief  Receives an amount of data in blocking mode. 
+  * @brief  Receives an amount of data in blocking mode.
   * @param  huart: pointer to a UART_HandleTypeDef structure that contains
   *                the configuration information for the specified UART module.
   * @param  p_data: Pointer to data buffer

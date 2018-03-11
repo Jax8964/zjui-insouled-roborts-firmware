@@ -139,7 +139,7 @@ static void mpu_mst_i2c_auto_read_config(uint8_t device_address, uint8_t reg_bas
 uint8_t ist8310_init(void)
 {
   //Enable I2C master mode, Reset I2C Slave module
-  mpu_write_reg(MPU6500_USER_CTRL, 0x30); 
+  mpu_write_reg(MPU6500_USER_CTRL, 0x30);
   MPU_INIT_DELAY(10);
   //I2C master clock 400kHz
   mpu_write_reg(MPU6500_I2C_MST_CTRL, 0x0d);
@@ -162,13 +162,13 @@ uint8_t ist8310_init(void)
   MPU_INIT_DELAY(10);
 
   //config as ready mode to access reg
-  ist_reg_write_by_mpu(IST8310_R_CONFA, 0x00); 
+  ist_reg_write_by_mpu(IST8310_R_CONFA, 0x00);
   if (ist_reg_read_by_mpu(IST8310_R_CONFA) != 0x00)
       return 2;
   MPU_INIT_DELAY(10);
 
   //normal state, no int
-  ist_reg_write_by_mpu(IST8310_R_CONFB, 0x00); 
+  ist_reg_write_by_mpu(IST8310_R_CONFB, 0x00);
   if (ist_reg_read_by_mpu(IST8310_R_CONFB) != 0x00)
       return 3;
   MPU_INIT_DELAY(10);
@@ -249,7 +249,7 @@ uint8_t mpu_device_init(void)
     { MPU6500_ACCEL_CONFIG,   0x10 }, // +-8G
     { MPU6500_ACCEL_CONFIG_2, 0x04 }, // acc bandwidth 20Hz
     { MPU6500_USER_CTRL,      0x20 }, // Enable the I2C Master I/F module
-                                      // pins ES_DA and ES_SCL are isolated from 
+                                      // pins ES_DA and ES_SCL are isolated from
                                       // pins SDA/SDI and SCL/SCLK.
   };
   uint8_t i = 0;
@@ -258,12 +258,13 @@ uint8_t mpu_device_init(void)
       mpu_write_reg(MPU6500_Init_Data[i][0], MPU6500_Init_Data[i][1]);
       MPU_INIT_DELAY(1);
   }
-  
+
   ist8310_init();
   mpu_offset_cal();
   return 0;
 }
 
+//Record the value when init
 void mpu_offset_cal(void)
 {
   int i;
@@ -288,4 +289,3 @@ void mpu_offset_cal(void)
   mpu_data.gy_offset=mpu_data.gx_offset / 300;
   mpu_data.gz_offset=mpu_data.gz_offset / 300;
 }
-

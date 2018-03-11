@@ -58,18 +58,18 @@ typedef enum
 } gimbal_cmd_e;
 
 typedef struct
-{  
+{
   int32_t pit_offset;
   int32_t yaw_offset;
-  
+
   uint8_t target_num;
   uint8_t last_num;
-  
+
   float yaw_calied_5;
   float pit_calied_5;
   float yaw_calied_9;
   float pit_calied_9;
-  
+
 } big_buff_t;
 
 typedef struct
@@ -89,10 +89,12 @@ typedef struct
 typedef struct
 {
   /* unit: degree */
+  //相对于中心位置的角度
   float pit_relative_angle;
   float yaw_relative_angle;
   float gyro_angle;
   /* uint: degree/s */
+  //云台角速度
   float yaw_palstance;
   float pit_palstance;
 } gim_sensor_t;
@@ -110,20 +112,20 @@ typedef struct
   /* ctrl mode */
   gimbal_mode_e ctrl_mode;
   gimbal_mode_e last_ctrl_mode;
-  
+
   /* gimbal information */
   gim_sensor_t  sensor;
   float         ecd_offset_angle;
   float         yaw_offset_angle;
-  
+
   /* gimbal ctrl parameter */
   gim_pid_t     pid;
   no_action_t   input;
-  
+
   /* read from flash */
   int32_t       pit_center_offset;
   int32_t       yaw_center_offset;
-  
+
   //gimbal_cmd_e  auto_ctrl_cmd;
 } gimbal_t;
 
@@ -145,4 +147,3 @@ void gimbal_task(void const *argu);
 void gimbal_self_check(void);
 
 #endif
-

@@ -135,14 +135,10 @@ void get_main_ctrl_mode(void)
     glb_ctrl_mode = SAFETY_MODE;
 
   //kb_enable_hook();
-<<<<<<< HEAD
-
-=======
   if (rc.sw1 == RC_MI && rc.sw2 == RC_UP)
     km.kb_enable = 1;
   else
     km.kb_enable = 0;
->>>>>>> 0dd7b245760635ba4aa688c911770d03eeec29fb
 }
 
 
@@ -171,9 +167,8 @@ static void gimbal_mode_handle(void)
   {
     case MANUAL_CTRL_MODE:
     {
-      if (last_glb_ctrl_mode == SEMI_AUTO_MODE)
+      //if (last_glb_ctrl_mode == SEMI_AUTO_MODE)
         gim.ctrl_mode = GIMBAL_FOLLOW_ZGYRO;
-
       /* no input control signal gimbal mode handle */
       if (gim.input.ac_mode == NO_ACTION)
       {
@@ -207,24 +202,24 @@ static void gimbal_mode_handle(void)
       if (km.twist_ctrl)
         gim.ctrl_mode = GIMBAL_FOLLOW_ZGYRO;
 
-#if 0
-//      /* manual trigger track armor */
-//      if (km.track_ctrl)
-//        gim.ctrl_mode = GIMBAL_TRACK_ARMOR;
-//
-//      /* manual trigger big buff */
-//      if (km.buff_ctrl && km.kb_enable)
-//      {
-//        gim.ctrl_mode = GIMBAL_SHOOT_BUFF;
-//        chassis.follow_gimbal = 0;
-//
-//        if (gim.last_ctrl_mode != GIMBAL_SHOOT_BUFF)
-//        {
-//          gim.auto_ctrl_cmd = CMD_CALI_FIVE;
-//        }
-//      }
-//      else
-//        chassis.follow_gimbal = 1;
+#ifdef VISION_ENABLE
+     /* manual trigger track armor */
+     if (km.track_ctrl)
+       gim.ctrl_mode = GIMBAL_TRACK_ARMOR;
+
+     /* manual trigger big buff */
+     if (km.buff_ctrl && km.kb_enable)
+     {
+       gim.ctrl_mode = GIMBAL_SHOOT_BUFF;
+       chassis.follow_gimbal = 0;
+
+       if (gim.last_ctrl_mode != GIMBAL_SHOOT_BUFF)
+       {
+         gim.auto_ctrl_cmd = CMD_CALI_FIVE;
+       }
+     }
+     else
+       chassis.follow_gimbal = 1;
 #endif
 
       if (gim.last_ctrl_mode == GIMBAL_RELAX)
@@ -315,8 +310,8 @@ static void chassis_mode_handle(void)
   {
     case MANUAL_CTRL_MODE:
     {
-      //chassis.ctrl_mode = MANUAL_FOLLOW_GIMBAL;
-      chassis.ctrl_mode = MANUAL_SEPARATE_GIMBAL;
+      chassis.ctrl_mode = MANUAL_FOLLOW_GIMBAL;
+      //chassis.ctrl_mode = MANUAL_SEPARATE_GIMBAL;
 
       /* keyboard trigger chassis twist mode */
       if (km.twist_ctrl)

@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScappleDocument Version="1.1" ID="1B88CCDF-21C8-4AA6-BE00-1905E950DE04">
+    <Notes>
+        <Note ID="0" FontSize="12.0" Position="565.0,126.0" Width="94.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1" Style="Square"></Border>
+            </Appearance>
+            <String>main_ctrl_mode</String>
+        </Note>
+        <Note ID="1" FontSize="12.0" Position="509.0,327.0" Width="139.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <String>MANUAL_CTRL_MODE</String>
+            <ConnectedNoteIDs>7, 13, 16, 18, 21, 23</ConnectedNoteIDs>
+            <PointsToNoteIDs>7, 13, 16, 18, 23</PointsToNoteIDs>
+        </Note>
+        <Note ID="2" FontSize="12.0" Position="530.0,666.0" Width="120.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <String>SEMI_AUTO_MODE</String>
+            <ConnectedNoteIDs>4, 9, 21, 23-24, 28</ConnectedNoteIDs>
+            <PointsToNoteIDs>9, 21, 23-24, 28</PointsToNoteIDs>
+        </Note>
+        <Note ID="3" FontSize="12.0" Position="529.0,745.0" Width="122.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <String>AUTO_CTRL_MODE</String>
+            <ConnectedNoteIDs>4</ConnectedNoteIDs>
+        </Note>
+        <Note ID="4" FontSize="12.0" Position="527.0,706.0" Width="156.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1" Style="Square"></Border>
+            </Appearance>
+            <String>define AUTO_NAVIGATION</String>
+            <ConnectedNoteIDs>2-3</ConnectedNoteIDs>
+        </Note>
+        <Note ID="5" FontSize="12.0" Position="401.0,710.0" Width="98.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <String>SAFETY_MODE</String>
+        </Note>
+        <Note ID="6" FontSize="12.0" Position="1058.0,135.0" Width="84.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1" Style="Square"></Border>
+            </Appearance>
+            <String>gim.ctrl_mode</String>
+        </Note>
+        <Note ID="7" FontSize="12.0" Position="918.238281,198.0" Width="143.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1" Style="Square"></Border>
+            </Appearance>
+            <String>if last_glb_ctrl_mode == SEMI_AUTO_MODE</String>
+            <ConnectedNoteIDs>1, 9</ConnectedNoteIDs>
+            <PointsToNoteIDs>9</PointsToNoteIDs>
+        </Note>
+        <Note ID="9" FontSize="12.0" Position="1074.0,278.0" Width="161.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <String>GIMBAL_FOLLOW_ZGYRO</String>
+            <ConnectedNoteIDs>2, 7, 10, 18</ConnectedNoteIDs>
+            <PointsToNoteIDs>10</PointsToNoteIDs>
+        </Note>
+        <Note ID="10" FontSize="12.0" Position="1069.0,369.0" Width="155.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <String>GIMBAL_NO_ARTI_INPUT</String>
+            <ConnectedNoteIDs>9, 20</ConnectedNoteIDs>
+            <PointsToNoteIDs>9</PointsToNoteIDs>
+        </Note>
+        <Note ID="11" FontSize="12.0" Position="1102.0,329.0" Width="108.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1" Style="Square"></Border>
+            </Appearance>
+            <String>remote_is_action()</String>
+        </Note>
+        <Note ID="12" FontSize="12.0" Position="743.0,558.0" Width="151.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1" Style="Square"></Border>
+            </Appearance>
+            <String>define VISION_ENABLE…</String>
+            <ConnectedNoteIDs>13, 16</ConnectedNoteIDs>
+        </Note>
+        <Note ID="13" FontSize="12.0" Position="934.0,512.0" Width="77.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1" Style="Square"></Border>
+            </Appearance>
+            <String>km.track_ctrl</String>
+            <ConnectedNoteIDs>1, 12, 14</ConnectedNoteIDs>
+            <PointsToNoteIDs>14</PointsToNoteIDs>
+        </Note>
+        <Note ID="14" FontSize="12.0" Position="1080.0,511.0" Width="144.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <String>GIMBAL_TRACK_MODE</String>
+            <ConnectedNoteIDs>13</ConnectedNoteIDs>
+        </Note>
+        <Note ID="15" FontSize="12.0" Position="1082.0,587.0" Width="141.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <String>GIMBAL_SHOOT_BUFF</String>
+            <ConnectedNoteIDs>16</ConnectedNoteIDs>
+        </Note>
+        <Note ID="16" FontSize="12.0" Position="941.0,597.0" Width="70.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1" Style="Square"></Border>
+            </Appearance>
+            <String>km.buff_ctrl</String>
+            <ConnectedNoteIDs>1, 12, 15</ConnectedNoteIDs>
+            <PointsToNoteIDs>15</PointsToNoteIDs>
+        </Note>
+        <Note ID="18" FontSize="12.0" Position="923.0,339.0" Width="74.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1" Style="Square"></Border>
+            </Appearance>
+            <String>km.twist_ctrl</String>
+            <ConnectedNoteIDs>1, 9</ConnectedNoteIDs>
+            <PointsToNoteIDs>9</PointsToNoteIDs>
+        </Note>
+        <Note ID="19" FontSize="12.0" Position="135.0,124.0" Width="84.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1" Style="Square"></Border>
+            </Appearance>
+            <String>gim.ctrl_mode</String>
+        </Note>
+        <Note ID="20" FontSize="12.0" Position="1081.0,402.0" Width="145.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <String>chassis.follow_gimbal = 1</String>
+            <ConnectedNoteIDs>10</ConnectedNoteIDs>
+        </Note>
+        <Note ID="21" FontSize="12.0" Position="80.0,496.0" Width="168.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <String>MANUAL_FOLLOW_GIMBAL</String>
+            <ConnectedNoteIDs>1-2, 22</ConnectedNoteIDs>
+        </Note>
+        <Note ID="22" FontSize="12.0" Position="88.0,562.0" Width="145.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <String>chassis.follow_gimbal = 1</String>
+            <ConnectedNoteIDs>21</ConnectedNoteIDs>
+        </Note>
+        <Note ID="23" FontSize="12.0" Position="81.0,386.0" Width="180.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <String>MANUAL_SAPERATE_GIMBAL</String>
+            <ConnectedNoteIDs>1-2</ConnectedNoteIDs>
+        </Note>
+        <Note ID="24" FontSize="12.0" Position="118.0,240.0" Width="95.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <String>DODGE_MODE</String>
+            <ConnectedNoteIDs>2</ConnectedNoteIDs>
+        </Note>
+        <Note ID="25" FontSize="12.0" Position="443.0,532.0" Width="25.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <String>UP</String>
+        </Note>
+        <Note ID="26" FontSize="12.0" Position="432.0,572.0" Width="22.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <String>MI</String>
+        </Note>
+        <Note ID="27" FontSize="12.0" Position="389.0,599.0" Width="28.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <String>DW</String>
+        </Note>
+        <Note ID="28" FontSize="12.0" Position="1071.0,682.0" Width="161.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <String>GIMBAL_POSITION_MODE</String>
+            <ConnectedNoteIDs>2</ConnectedNoteIDs>
+        </Note>
+        <Note ID="29" FontSize="12.0" Position="661.0,610.0" Width="25.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <String>UP</String>
+        </Note>
+        <Note ID="30" FontSize="12.0" Position="701.0,667.0" Width="22.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <String>MI</String>
+        </Note>
+        <Note ID="31" FontSize="12.0" Position="729.0,667.0" Width="28.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <String>DW</String>
+        </Note>
+        <Note ID="32" FontSize="12.0" Position="377.0,350.0" Width="44.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1" Style="Jagged"></Border>
+            </Appearance>
+            <String>Debug</String>
+        </Note>
+    </Notes>
+    <BackgroundShapes></BackgroundShapes>
+    <AutoFit>0-6, 9-16, 18-32</AutoFit>
+    <NoteStyles>
+        <Style Name="Blue Bubble" ID="A644B06B-9AD9-4535-8D86-BA63F727D2B3" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.477193 0.557066 0.76433</BorderColor>
+            <FillColor>0.840969 0.866828 0.925903</FillColor>
+        </Style>
+        <Style Name="Brown Bubble" ID="72579B7F-1D24-425D-9B94-6CF94015A06D" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.290055 0.1523 0.182215</BorderColor>
+            <FillColor>0.940019 0.892907 0.779716</FillColor>
+        </Style>
+        <Style Name="Green Bubble" ID="D600CAD8-069E-4D83-9401-67211E38CD6D" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.331867 0.609932 0.356197</BorderColor>
+            <FillColor>0.790123 0.882328 0.80198</FillColor>
+        </Style>
+        <Style Name="Pink Bubble" ID="C8B341A2-9709-4320-AAC6-F882389F6E70" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.747881 0.366532 0.542813</BorderColor>
+            <FillColor>0.918452 0.807302 0.863467</FillColor>
+        </Style>
+        <Style Name="Red Text" ID="7F5486E8-F6CD-479E-9890-B39B91097802" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="Yes" AffectNoteBody="No" AffectFade="No">
+            <TextColor>1.0 0.0 0.0</TextColor>
+        </Style>
+        <Style Name="Title Text" ID="48BE576B-2915-4535-AE68-B53F8AF9DC09" AffectFontStyle="Yes" AffectAlignment="Yes" AffectTextColor="No" AffectNoteBody="No" AffectFade="No">
+            <FontSize>28.0</FontSize>
+            <IsBold>Yes</IsBold>
+        </Style>
+        <Style Name="Yellow Bubble" ID="D4C03C41-369E-47DA-92DF-0032D7C9B674" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.756763 0.785592 0.373258</BorderColor>
+            <FillColor>0.906773 0.910625 0.634363</FillColor>
+        </Style>
+    </NoteStyles>
+    <UISettings>
+        <BackgroundColor>0.999737 0.986332 0.931298</BackgroundColor>
+        <DefaultFont>Helvetica</DefaultFont>
+        <DefaultTextColor>0.0 0.0 0.0</DefaultTextColor>
+    </UISettings>
+    <PrintSettings PaperSize="595.0,842.0" LeftMargin="72.0" RightMargin="72.0" TopMargin="90.0" BottomMargin="90.0" PaperType="iso-a4" Orientation="Portrait" HorizontalPagination="Clip" VerticalPagination="Auto" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="Yes" PagesAcross="1" PagesDown="1"></PrintSettings>
+</ScappleDocument>

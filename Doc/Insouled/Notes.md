@@ -74,7 +74,7 @@ chassis_mode_handle():
     左边手杆 下   ：底盘模式=停止模式
   其他情况下，底盘模式=停止模式
 
-#### bsp_can
+#### bsp_ca
 send_gimbal_cur(): 发送CAN1报文，云台电机电流。
 send_chassis_cur(): 发送CAN1报文，底盘电机电流。
 
@@ -86,6 +86,6 @@ can_msg_send_task(): 发送控制信号[OS]
 
 err_detector_hook: 记录当前时间，可能是用于debug
 
-rc.ch2/ch1/ch3--(chassis_operation_func)--rm.vx/vy/vw-->chassis.vx/vy/vw--(mecanum_calc)-->chassis.wheel_speed_ref
+gim.input.no_action_flag/time 在MANUAL_CTRL_MODE下，底盘使用GIMBAL_FOLLOW_ZGYRO，同时判断遥控器是否有输入，没有则进入GIMBAL_NO_ARTI_INPUT模式，在这两个模式中根据一定规则切换（mode_switch_task中根据是否收到输入切换（chassis.follow_gimbal = 1），gimbal_task中GIMBAL_NO_ARTI_INPUT有超时切换？）。
 
-moto_chassis[i].speed_rpm--(get_chassis_info)-->chassis.wheel_speed_fdb
+chassis.follow_gimbal: 可能是根据云台是否有遥控控制信号决定MANUAL_FOLLOW_GIMBAL模式下是否旋转

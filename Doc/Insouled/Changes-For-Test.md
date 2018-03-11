@@ -2,6 +2,9 @@
 Cancel define of AUTO_NAVIGATION (sys_config.h, Line 133)
 
 ### 2018.3.10 liuzikai
-chassis_mode_handle(): Change default mode of chassis under MANUAL_CTRL_MODE from MANUAL_FOLLOW_GIMBAL to MANUAL_SEPARATE_GIMBAL (mode_switch_task.c, Line 321)
+chassis_mode_handle(): Change default mode of chassis under MANUAL_CTRL_MODE from MANUAL_FOLLOW_GIMBAL to  MANUAL_SEPARATE_GIMBAL (mode_switch_task.c, Line 321)
 
-Cancel several static in mode_switch_task.h to pass compiling (FIXME!)
+Cancel several static in mode_switch_task.h to pass compiling
+
+### 2018.3.11 liuzikai
+GIMBAL_FOLLOW_ZGYRO

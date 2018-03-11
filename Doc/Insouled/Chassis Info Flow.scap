@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ScappleDocument Version="1.1" ID="09FBD883-C4C2-4E90-A7D7-24FA70825B95">
     <Notes>
-        <Note ID="0" FontSize="12.0" Position="279.0,216.757812" Width="87.0">
+        <Note ID="0" FontSize="12.0" Position="276.71875,192.066406" Width="87.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <Border Weight="1" Style="Square"></Border>
             </Appearance>
             <String>rc.ch1/ch2/ch3</String>
-            <ConnectedNoteIDs>1</ConnectedNoteIDs>
+            <ConnectedNoteIDs>1, 34</ConnectedNoteIDs>
             <PointsToNoteIDs>1</PointsToNoteIDs>
         </Note>
-        <Note ID="1" FontSize="12.0" Position="384.0,314.757812" Width="71.0">
+        <Note ID="1" FontSize="12.0" Position="384.0,341.953125" Width="71.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <Border Weight="1" Style="Square"></Border>
@@ -19,7 +19,7 @@
             <ConnectedNoteIDs>0, 10</ConnectedNoteIDs>
             <PointsToNoteIDs>10</PointsToNoteIDs>
         </Note>
-        <Note ID="3" FontSize="12.0" Position="302.226562,264.871094" Width="143.0">
+        <Note ID="3" FontSize="12.0" Position="281.570312,278.6875" Width="143.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <Border Weight="1"></Border>
@@ -27,7 +27,7 @@
             <String>chassis_operation_func()</String>
             <ConnectedNoteIDs>4</ConnectedNoteIDs>
         </Note>
-        <Note ID="4" FontSize="12.0" Position="468.480469,263.113281" Width="156.0">
+        <Note ID="4" FontSize="12.0" Position="459.492188,284.34375" Width="156.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <Border Weight="1"></Border>
@@ -36,7 +36,7 @@
             <ConnectedNoteIDs>3, 6</ConnectedNoteIDs>
             <PointsToNoteIDs>3</PointsToNoteIDs>
         </Note>
-        <Note ID="6" FontSize="12.0" Position="640.136719,325.855469" Width="106.0">
+        <Note ID="6" FontSize="12.0" Position="659.753906,362.46875" Width="106.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <Border Weight="1"></Border>
@@ -45,16 +45,16 @@
             <ConnectedNoteIDs>4, 9, 17</ConnectedNoteIDs>
             <PointsToNoteIDs>4</PointsToNoteIDs>
         </Note>
-        <Note ID="9" FontSize="12.0" Position="528.722656,130.203125" Width="112.0">
+        <Note ID="9" FontSize="12.0" Position="586.886719,190.65625" Width="112.0">
             <Appearance>
                 <Alignment>Left</Alignment>
-                <Border Weight="1"></Border>
+                <Border Weight="1" Style="Jagged"></Border>
             </Appearance>
             <String>info_get_task()[OS]</String>
             <ConnectedNoteIDs>6</ConnectedNoteIDs>
             <PointsToNoteIDs>6</PointsToNoteIDs>
         </Note>
-        <Note ID="10" FontSize="12.0" Position="442.816406,400.960938" Width="97.0">
+        <Note ID="10" FontSize="12.0" Position="457.621094,455.074219" Width="97.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <Border Weight="1" Style="Square"></Border>
@@ -63,15 +63,15 @@
             <ConnectedNoteIDs>1, 13</ConnectedNoteIDs>
             <PointsToNoteIDs>13</PointsToNoteIDs>
         </Note>
-        <Note ID="12" FontSize="12.0" Position="395.0,355.429688" Width="109.0">
+        <Note ID="12" FontSize="12.0" Position="400.300781,396.316406" Width="109.0">
             <Appearance>
                 <Alignment>Left</Alignment>
-                <Border Weight="1"></Border>
+                <Border Weight="1" Style="Jagged"></Border>
             </Appearance>
             <String>chassis_task()[OS]</String>
             <ConnectedNoteIDs>24</ConnectedNoteIDs>
         </Note>
-        <Note ID="13" FontSize="12.0" Position="542.0,475.0" Width="143.0">
+        <Note ID="13" FontSize="12.0" Position="543.792969,545.847656" Width="143.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <Border Weight="1" Style="Square"></Border>
@@ -80,14 +80,14 @@
             <ConnectedNoteIDs>10, 22</ConnectedNoteIDs>
             <PointsToNoteIDs>22</PointsToNoteIDs>
         </Note>
-        <Note ID="14" FontSize="12.0" Position="506.71875,439.457031" Width="97.0">
+        <Note ID="14" FontSize="12.0" Position="508.792969,509.847656" Width="97.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <Border Weight="1"></Border>
             </Appearance>
             <String>mecanum_calc()</String>
         </Note>
-        <Note ID="15" FontSize="12.0" Position="811.238281,471.464844" Width="146.0">
+        <Note ID="15" FontSize="12.0" Position="812.792969,541.847656" Width="146.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <Border Weight="1" Style="Square"></Border>
@@ -96,7 +96,7 @@
             <ConnectedNoteIDs>16, 22</ConnectedNoteIDs>
             <PointsToNoteIDs>22</PointsToNoteIDs>
         </Note>
-        <Note ID="16" FontSize="12.0" Position="894.015625,245.296875" Width="155.0">
+        <Note ID="16" FontSize="12.0" Position="896.898438,241.328125" Width="155.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <Border Weight="1" Style="Square"></Border>
@@ -105,7 +105,7 @@
             <ConnectedNoteIDs>15, 19</ConnectedNoteIDs>
             <PointsToNoteIDs>15</PointsToNoteIDs>
         </Note>
-        <Note ID="17" FontSize="12.0" Position="858.0,347.5" Width="106.0">
+        <Note ID="17" FontSize="12.0" Position="877.210938,364.0" Width="106.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <Border Weight="1"></Border>
@@ -113,7 +113,7 @@
             <String>get_chassis_info()</String>
             <ConnectedNoteIDs>6</ConnectedNoteIDs>
         </Note>
-        <Note ID="18" FontSize="12.0" Position="940.0,188.246094" Width="125.0">
+        <Note ID="18" FontSize="12.0" Position="813.753906,185.820312" Width="125.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <Border Weight="1"></Border>
@@ -121,7 +121,7 @@
             <String>encoder_data_handle</String>
             <ConnectedNoteIDs>20</ConnectedNoteIDs>
         </Note>
-        <Note ID="19" FontSize="12.0" Position="727.566406,82.054688" Width="34.0">
+        <Note ID="19" FontSize="12.0" Position="672.0,21.242188" Width="34.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <Border Weight="1" Style="Cloud"></Border>
@@ -130,16 +130,16 @@
             <ConnectedNoteIDs>16, 27</ConnectedNoteIDs>
             <PointsToNoteIDs>16</PointsToNoteIDs>
         </Note>
-        <Note ID="20" FontSize="12.0" Position="1124.8125,154.347656" Width="153.0">
+        <Note ID="20" FontSize="12.0" Position="998.488281,124.996094" Width="153.0">
             <Appearance>
                 <Alignment>Left</Alignment>
-                <Border Weight="1"></Border>
+                <Border Weight="1" Style="Jagged"></Border>
             </Appearance>
             <String>HAL_CAN_RxCpltCallback</String>
             <ConnectedNoteIDs>18</ConnectedNoteIDs>
             <PointsToNoteIDs>18</PointsToNoteIDs>
         </Note>
-        <Note ID="21" FontSize="12.0" Position="702.5625,457.300781" Width="89.0">
+        <Note ID="21" FontSize="12.0" Position="704.792969,527.847656" Width="89.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <Border Weight="1" Style="Square"></Border>
@@ -148,7 +148,7 @@
             <ConnectedNoteIDs>22-23</ConnectedNoteIDs>
             <PointsToNoteIDs>23</PointsToNoteIDs>
         </Note>
-        <Note ID="22" FontSize="12.0" Position="719.0,525.0" Width="53.0">
+        <Note ID="22" FontSize="12.0" Position="720.792969,595.847656" Width="53.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <Border Weight="1"></Border>
@@ -157,7 +157,7 @@
             <ConnectedNoteIDs>13, 15, 21</ConnectedNoteIDs>
             <PointsToNoteIDs>21</PointsToNoteIDs>
         </Note>
-        <Note ID="23" FontSize="12.0" Position="721.148438,377.0" Width="114.0">
+        <Note ID="23" FontSize="12.0" Position="720.421875,425.976562" Width="114.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <Border Weight="1" Style="Square"></Border>
@@ -166,7 +166,7 @@
             <ConnectedNoteIDs>21, 27</ConnectedNoteIDs>
             <PointsToNoteIDs>27</PointsToNoteIDs>
         </Note>
-        <Note ID="24" FontSize="12.0" Position="668.976562,421.953125" Width="147.0">
+        <Note ID="24" FontSize="12.0" Position="685.617188,472.09375" Width="147.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <Border Weight="1"></Border>
@@ -174,7 +174,7 @@
             <String>memcpy in chassis_task()</String>
             <ConnectedNoteIDs>12</ConnectedNoteIDs>
         </Note>
-        <Note ID="25" FontSize="12.0" Position="1090.078125,311.175781" Width="209.0">
+        <Note ID="25" FontSize="12.0" Position="1065.703125,314.769531" Width="209.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <Border Weight="1"></Border>
@@ -183,99 +183,108 @@
             <ConnectedNoteIDs>26-27</ConnectedNoteIDs>
             <PointsToNoteIDs>27</PointsToNoteIDs>
         </Note>
-        <Note ID="26" FontSize="12.0" Position="1238.964844,442.203125" Width="151.0">
+        <Note ID="26" FontSize="12.0" Position="1135.441406,458.5625" Width="151.0">
             <Appearance>
                 <Alignment>Left</Alignment>
-                <Border Weight="1"></Border>
+                <Border Weight="1" Style="Jagged"></Border>
             </Appearance>
             <String>can_msg_send_task()[OS]</String>
             <ConnectedNoteIDs>25</ConnectedNoteIDs>
             <PointsToNoteIDs>25</PointsToNoteIDs>
         </Note>
-        <Note ID="27" FontSize="12.0" Position="731.867188,281.230469" Width="113.0">
+        <Note ID="27" FontSize="12.0" Position="741.484375,321.089844" Width="113.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <Border Weight="1"></Border>
             </Appearance>
             <String>send_chassis_cur()</String>
             <ConnectedNoteIDs>19, 23, 25</ConnectedNoteIDs>
+            <PointsToNoteIDs>19</PointsToNoteIDs>
         </Note>
-        <Note ID="29" FontSize="12.0" Position="823.878906,311.734375" Width="103.0">
+        <Note ID="29" FontSize="12.0" Position="825.0,292.238281" Width="103.0">
             <Appearance>
                 <Alignment>Left</Alignment>
             </Appearance>
             <String>&lt;info_interactive&gt;</String>
         </Note>
-        <Note ID="30" FontSize="12.0" Position="92.0,612.0" Width="139.0">
+        <Note ID="34" FontSize="12.0" Position="230.121094,39.859375" Width="42.0">
             <Appearance>
                 <Alignment>Left</Alignment>
-                <Border Weight="1"></Border>
+                <Border Weight="1" Style="Cloud"></Border>
             </Appearance>
-            <String>mode_switch_task()[OS]</String>
-            <ConnectedNoteIDs>31</ConnectedNoteIDs>
-            <PointsToNoteIDs>31</PointsToNoteIDs>
+            <String>DBUS</String>
+            <ConnectedNoteIDs>0</ConnectedNoteIDs>
+            <PointsToNoteIDs>0</PointsToNoteIDs>
         </Note>
-        <Note ID="31" FontSize="12.0" Position="290.621094,667.796875" Width="117.0">
+        <Note ID="35" FontSize="12.0" Position="230.648438,110.882812" Width="111.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <Border Weight="1"></Border>
             </Appearance>
-            <String>get_chassis_mode()</String>
-            <ConnectedNoteIDs>30</ConnectedNoteIDs>
+            <String>rc_callback_handle</String>
+            <ConnectedNoteIDs>36</ConnectedNoteIDs>
         </Note>
-        <Note ID="33" FontSize="12.0" Position="485.0,674.0" Width="136.0">
+        <Note ID="36" FontSize="12.0" Position="375.710938,71.5625" Width="121.0">
             <Appearance>
                 <Alignment>Left</Alignment>
-                <Border Weight="1"></Border>
+                <Border Weight="1" Style="Jagged"></Border>
             </Appearance>
-            <String>chassis_mode_handle()</String>
+            <String>uart_rx_idle_callback</String>
+            <ConnectedNoteIDs>35</ConnectedNoteIDs>
+            <PointsToNoteIDs>35</PointsToNoteIDs>
+        </Note>
+        <Note ID="37" FontSize="12.0" Position="461.0,251.0" Width="83.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>&lt;remote_ctrl&gt;</String>
         </Note>
     </Notes>
     <BackgroundShapes>
-        <Shape ID="8" Sticky="No" Position="270.0,255.0" Width="362.824219" Height="37.0">
+        <Shape ID="8" Sticky="No" Position="270.0,261.0" Width="362.824219" Height="57.953125">
             <Appearance>
                 <Border Weight="1" Style="Square"></Border>
             </Appearance>
         </Shape>
-        <Shape ID="28" Sticky="No" Position="637.0,276.261719" Width="339.0" Height="96.0">
+        <Shape ID="28" Sticky="No" Position="648.0,303.0" Width="342.0" Height="96.0">
             <Appearance>
                 <Border Weight="1" Style="Square"></Border>
             </Appearance>
         </Shape>
     </BackgroundShapes>
-    <AutoFit>0-1, 3-4, 6, 9-10, 12-24, 26-27, 29-31, 33</AutoFit>
+    <AutoFit>0-1, 3-4, 6, 9-10, 12-24, 26-27, 29, 34-37</AutoFit>
     <NoteStyles>
-        <Style Name="Title Text" ID="B998D733-2FE2-4A4B-9F27-5E169131FFFB" AffectFontStyle="Yes" AffectAlignment="Yes" AffectTextColor="No" AffectNoteBody="No" AffectFade="No">
-            <FontSize>28.0</FontSize>
-            <IsBold>Yes</IsBold>
-        </Style>
-        <Style Name="Red Text" ID="E0622664-EF90-4CBE-BC38-70E6A2AF0F2C" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="Yes" AffectNoteBody="No" AffectFade="No">
-            <TextColor>1.0 0.0 0.0</TextColor>
+        <Style Name="Blue Bubble" ID="E5CD07ED-AACF-4243-9076-CA19A02CD1BF" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.477193 0.557066 0.76433</BorderColor>
+            <FillColor>0.840969 0.866828 0.925903</FillColor>
         </Style>
         <Style Name="Brown Bubble" ID="C9D9A6DD-5ADB-474A-BF3C-68C2B6ADF24D" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
             <BorderThickness>1</BorderThickness>
             <BorderColor>0.290055 0.1523 0.182215</BorderColor>
             <FillColor>0.940019 0.892907 0.779716</FillColor>
         </Style>
-        <Style Name="Yellow Bubble" ID="8E041179-5353-4D9F-B4B6-37A9B93C7AE3" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
-            <BorderThickness>1</BorderThickness>
-            <BorderColor>0.756763 0.785592 0.373258</BorderColor>
-            <FillColor>0.906773 0.910625 0.634363</FillColor>
-        </Style>
         <Style Name="Green Bubble" ID="8E2EF5E6-8E57-4947-9DB2-8CA42630CF6A" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
             <BorderThickness>1</BorderThickness>
             <BorderColor>0.331867 0.609932 0.356197</BorderColor>
             <FillColor>0.790123 0.882328 0.80198</FillColor>
         </Style>
-        <Style Name="Blue Bubble" ID="E5CD07ED-AACF-4243-9076-CA19A02CD1BF" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
-            <BorderThickness>1</BorderThickness>
-            <BorderColor>0.477193 0.557066 0.76433</BorderColor>
-            <FillColor>0.840969 0.866828 0.925903</FillColor>
-        </Style>
         <Style Name="Pink Bubble" ID="CF639F46-6046-4411-B4FB-E2D5EBEC9EE0" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
             <BorderThickness>1</BorderThickness>
             <BorderColor>0.747881 0.366532 0.542813</BorderColor>
             <FillColor>0.918452 0.807302 0.863467</FillColor>
+        </Style>
+        <Style Name="Red Text" ID="E0622664-EF90-4CBE-BC38-70E6A2AF0F2C" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="Yes" AffectNoteBody="No" AffectFade="No">
+            <TextColor>1.0 0.0 0.0</TextColor>
+        </Style>
+        <Style Name="Title Text" ID="B998D733-2FE2-4A4B-9F27-5E169131FFFB" AffectFontStyle="Yes" AffectAlignment="Yes" AffectTextColor="No" AffectNoteBody="No" AffectFade="No">
+            <FontSize>28.0</FontSize>
+            <IsBold>Yes</IsBold>
+        </Style>
+        <Style Name="Yellow Bubble" ID="8E041179-5353-4D9F-B4B6-37A9B93C7AE3" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.756763 0.785592 0.373258</BorderColor>
+            <FillColor>0.906773 0.910625 0.634363</FillColor>
         </Style>
     </NoteStyles>
     <UISettings>

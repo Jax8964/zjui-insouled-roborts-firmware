@@ -38,9 +38,9 @@ typedef struct
   int roll_cnt;
   int pitch_cnt;
   int yaw_cnt;
-  
-  float last_roll;
-  float last_pitch;
+
+  float last_roll; //Unused
+  float last_pitch; //Unused
   float last_yaw;
 
   float roll;
@@ -56,6 +56,9 @@ void imu_task(void const *argu);
 void imu_param_init(void);
 
 static void imu_temp_ctrl_init(void);
-static void imu_temp_keep(void);
+void imu_temp_keep(void);
+
+void imu_AHRS_update(void);
+void imu_attitude_update(void);
 
 #endif

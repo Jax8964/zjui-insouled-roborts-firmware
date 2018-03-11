@@ -32,6 +32,8 @@
 #include "string.h"
 #include "sys_config.h"
 
+#include "led.h"
+
 moto_measure_t moto_pit;
 moto_measure_t moto_yaw;
 moto_measure_t moto_trigger;
@@ -56,8 +58,10 @@ void HAL_CAN_RxCpltCallback(CAN_HandleTypeDef* _hcan)
       err_detector_hook(CHASSIS_M1_OFFLINE + i);
     }
     break;
+    //encoder_data_handle适用于解码底盘电机返回信号，对于云台电机，返回的实际电流（2-3）和给定电流（4-5）并不能被正确解码，但是ecd可以。
     case CAN_YAW_MOTOR_ID:
     {
+
       encoder_data_handle(&moto_yaw, _hcan);
       err_detector_hook(GIMBAL_YAW_OFFLINE);
     }
