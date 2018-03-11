@@ -22,6 +22,23 @@ glb_ctrl_mode: 主模式，sw2
 负责根据模式计算底盘电机控制数据(?)
 chassis_task()[OS]
 
+### gimbal_task
+no_action_handle():
+--gim.input.no_action_flag = 1:
+
+### imu_task
+invSqrt(x):
+  较快地求出 1/sqrt(x) 可以用来求法线
+init_quaternion():
+  对四元数初始化
+imu_AHRS_update():
+  当前航姿更新
+imu_attitude_update():
+  当前姿势更新
+imu_param_init():
+  imu参数初始化
+imu_temp_ctrl_init()
+imu_temp_keep()
 
 
 ### modeswitch_task
@@ -74,7 +91,41 @@ chassis_mode_handle():
     左边手杆 下   ：底盘模式=停止模式
   其他情况下，底盘模式=停止模式
 
+<<<<<<< HEAD
 #### bsp_ca
+=======
+云台模式：
+GIMBAL_RELAX         = 0, 放松模式
+GIMBAL_INIT          = 1, 初始化模式
+GIMBAL_NO_ARTI_INPUT = 2, 没有输入模式
+GIMBAL_FOLLOW_ZGYRO  = 3, 跟随陀螺仪
+GIMBAL_TRACK_ARMOR   = 4,
+GIMBAL_PATROL_MODE   = 5, 巡逻模式
+GIMBAL_SHOOT_BUFF    = 6,
+GIMBAL_POSITION_MODE = 7,
+
+gim.input.action_mode = 1, 云台输入有效
+gim.input.action_mode = 0, 云台输入无效
+
+get_gimbal_mode():
+--判断云台有没有输入（在gimbal_task中有用到）gim.input.action_mode = 0 or 1
+--如果gim.ctrl_mode不是初始化模式，进入gimbal_mode_handle();
+--如果gim.ctrl_mode不是巡逻模式，patrol_count(在gimbal_patrol_handle()中用于计算) = 0;
+--如果gim.last_ctrl_mode是放松模式，但是现在的模式不是放松模式，那么：
+      gim.ctrl_mode = GIMBAL_INIT
+      初始化yaw的角度：gim.ecd_offset_angle = gim.sensor.yaw_relative_angle(大概是目前云台yaw角度，似乎是可以直接获得的？)
+      gimbal_back_param():(我觉得是将gimbal的一系列参数初始化)
+
+
+gimbal_mode_handle():
+--如果glb_ctrl_mode 是手动模式：
+    若last_glb_ctrl_mode = 半手动， 底盘模式变为 GIMBAL_FOLLOW_ZGYRO
+    若云台没有输入(gim.input.action_mode = 0) 且,则：
+
+
+
+#### bsp_can
+>>>>>>> 0530e97236ce9ee3bfcdaa78cd2bae6982b3b484
 send_gimbal_cur(): 发送CAN1报文，云台电机电流。
 send_chassis_cur(): 发送CAN1报文，底盘电机电流。
 
@@ -82,6 +133,8 @@ send_chassis_cur(): 发送CAN1报文，底盘电机电流。
 can_msg_send_task(): 发送控制信号[OS]
   send_gimbal_motor_ctrl_message()
   send_chassis_motor_ctrl_message():其中调用send_chassis_cur()
+
+###keyboard
 
 
 err_detector_hook: 记录当前时间，可能是用于debug
