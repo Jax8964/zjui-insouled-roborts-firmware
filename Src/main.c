@@ -79,6 +79,7 @@
 #include "comm_task.h"
 #include "sys_config.h"
 #include "chassis_task.h"
+#include "modeswitch_task.h"
 
 #include <stdio.h>
 /* USER CODE END Includes */
@@ -169,12 +170,10 @@ int main(void)
   dbus_uart_init();
 
   /* USER CODE END 2 */
-	printf("Hello world!");
   /* Call init function for freertos objects (in freertos.c) */
-  MX_FREERTOS_Init();
+  //MX_FREERTOS_Init();
 
   /* Start scheduler */
-  //FIXME: Can't pass! Even in the offical code.
   //osKernelStart();
 
   /* We should never get here as control is now taken by the scheduler */
@@ -187,27 +186,13 @@ int main(void)
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
-<<<<<<< HEAD
 
-    //Read rc from UART
+    uart_receive_handler(&huart1);
+    get_main_ctrl_mode();
+    get_chassis_mode();
+
     get_chassis_info();
-    chassis.ctrl_mode = MANUAL_SEPARATE_GIMBAL;
     chassis_task(NULL);
-=======
-    //NOTE: From info_get_task.c - info_get_task()
-    //uart_receive_handler(&DBUS_HUART);
-    /*get_chassis_info();
-    get_gimbal_info();
-
-    //NOTE:
-    //NOTE: From chassis_task - chassis_task()
-
-
-
-    //NOTE: From comm_task - can_msg_send_task()
-    send_gimbal_motor_ctrl_message(glb_cur.gimbal_cur);
-    send_chassis_motor_ctrl_message(glb_cur.chassis_cur);*/
->>>>>>> 5003331853f9b98022a443ccf8bed00ea6983cd6
 
     send_chassis_motor_ctrl_message(glb_cur.chassis_cur);
 
